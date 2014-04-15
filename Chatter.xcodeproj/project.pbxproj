@@ -1,0 +1,491 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3005679418FDE6F20016B55D /* MultiPeerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3005679318FDE6F20016B55D /* MultiPeerManager.m */; };
+		3005679618FDE7270016B55D /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3005679518FDE7270016B55D /* MultipeerConnectivity.framework */; };
+		30AC52CD18FC9D0000014DEB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30AC52CC18FC9D0000014DEB /* Foundation.framework */; };
+		30AC52CF18FC9D0000014DEB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30AC52CE18FC9D0000014DEB /* CoreGraphics.framework */; };
+		30AC52D118FC9D0000014DEB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30AC52D018FC9D0000014DEB /* UIKit.framework */; };
+		30AC52D318FC9D0000014DEB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30AC52D218FC9D0000014DEB /* CoreData.framework */; };
+		30AC52D918FC9D0000014DEB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 30AC52D718FC9D0000014DEB /* InfoPlist.strings */; };
+		30AC52DB18FC9D0000014DEB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AC52DA18FC9D0000014DEB /* main.m */; };
+		30AC52DF18FC9D0000014DEB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AC52DE18FC9D0000014DEB /* AppDelegate.m */; };
+		30AC52E218FC9D0000014DEB /* Chatter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 30AC52E018FC9D0000014DEB /* Chatter.xcdatamodeld */; };
+		30AC52E418FC9D0000014DEB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30AC52E318FC9D0000014DEB /* Images.xcassets */; };
+		30AC52EB18FC9D0000014DEB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30AC52EA18FC9D0000014DEB /* XCTest.framework */; };
+		30AC52EC18FC9D0000014DEB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30AC52CC18FC9D0000014DEB /* Foundation.framework */; };
+		30AC52ED18FC9D0000014DEB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30AC52D018FC9D0000014DEB /* UIKit.framework */; };
+		30AC52EE18FC9D0000014DEB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30AC52D218FC9D0000014DEB /* CoreData.framework */; };
+		30AC52F618FC9D0000014DEB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 30AC52F418FC9D0000014DEB /* InfoPlist.strings */; };
+		30AC52F818FC9D0000014DEB /* ChatterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AC52F718FC9D0000014DEB /* ChatterTests.m */; };
+		30AC530218FC9D1500014DEB /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30AC530118FC9D1500014DEB /* main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		30AC52EF18FC9D0000014DEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 30AC52C118FC9D0000014DEB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 30AC52C818FC9D0000014DEB;
+			remoteInfo = Chatter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3005679218FDE6F20016B55D /* MultiPeerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiPeerManager.h; sourceTree = "<group>"; };
+		3005679318FDE6F20016B55D /* MultiPeerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiPeerManager.m; sourceTree = "<group>"; };
+		3005679518FDE7270016B55D /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
+		30AC52C918FC9D0000014DEB /* Chatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		30AC52CC18FC9D0000014DEB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		30AC52CE18FC9D0000014DEB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		30AC52D018FC9D0000014DEB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		30AC52D218FC9D0000014DEB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		30AC52D618FC9D0000014DEB /* Chatter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Chatter-Info.plist"; sourceTree = "<group>"; };
+		30AC52D818FC9D0000014DEB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		30AC52DA18FC9D0000014DEB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		30AC52DC18FC9D0000014DEB /* Chatter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chatter-Prefix.pch"; sourceTree = "<group>"; };
+		30AC52DD18FC9D0000014DEB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		30AC52DE18FC9D0000014DEB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		30AC52E118FC9D0000014DEB /* Chatter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Chatter.xcdatamodel; sourceTree = "<group>"; };
+		30AC52E318FC9D0000014DEB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		30AC52E918FC9D0000014DEB /* ChatterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		30AC52EA18FC9D0000014DEB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		30AC52F318FC9D0000014DEB /* ChatterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ChatterTests-Info.plist"; sourceTree = "<group>"; };
+		30AC52F518FC9D0000014DEB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		30AC52F718FC9D0000014DEB /* ChatterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatterTests.m; sourceTree = "<group>"; };
+		30AC530118FC9D1500014DEB /* main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		30AC52C618FC9D0000014DEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3005679618FDE7270016B55D /* MultipeerConnectivity.framework in Frameworks */,
+				30AC52CF18FC9D0000014DEB /* CoreGraphics.framework in Frameworks */,
+				30AC52D318FC9D0000014DEB /* CoreData.framework in Frameworks */,
+				30AC52D118FC9D0000014DEB /* UIKit.framework in Frameworks */,
+				30AC52CD18FC9D0000014DEB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30AC52E618FC9D0000014DEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30AC52EB18FC9D0000014DEB /* XCTest.framework in Frameworks */,
+				30AC52EE18FC9D0000014DEB /* CoreData.framework in Frameworks */,
+				30AC52ED18FC9D0000014DEB /* UIKit.framework in Frameworks */,
+				30AC52EC18FC9D0000014DEB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		30AC52C018FC9D0000014DEB = {
+			isa = PBXGroup;
+			children = (
+				30AC52D418FC9D0000014DEB /* Chatter */,
+				30AC52F118FC9D0000014DEB /* ChatterTests */,
+				30AC52CB18FC9D0000014DEB /* Frameworks */,
+				30AC52CA18FC9D0000014DEB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		30AC52CA18FC9D0000014DEB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				30AC52C918FC9D0000014DEB /* Chatter.app */,
+				30AC52E918FC9D0000014DEB /* ChatterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		30AC52CB18FC9D0000014DEB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3005679518FDE7270016B55D /* MultipeerConnectivity.framework */,
+				30AC52CC18FC9D0000014DEB /* Foundation.framework */,
+				30AC52CE18FC9D0000014DEB /* CoreGraphics.framework */,
+				30AC52D018FC9D0000014DEB /* UIKit.framework */,
+				30AC52D218FC9D0000014DEB /* CoreData.framework */,
+				30AC52EA18FC9D0000014DEB /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		30AC52D418FC9D0000014DEB /* Chatter */ = {
+			isa = PBXGroup;
+			children = (
+				30AC530118FC9D1500014DEB /* main.storyboard */,
+				3005679218FDE6F20016B55D /* MultiPeerManager.h */,
+				3005679318FDE6F20016B55D /* MultiPeerManager.m */,
+				30AC52DD18FC9D0000014DEB /* AppDelegate.h */,
+				30AC52DE18FC9D0000014DEB /* AppDelegate.m */,
+				30AC52E318FC9D0000014DEB /* Images.xcassets */,
+				30AC52E018FC9D0000014DEB /* Chatter.xcdatamodeld */,
+				30AC52D518FC9D0000014DEB /* Supporting Files */,
+			);
+			path = Chatter;
+			sourceTree = "<group>";
+		};
+		30AC52D518FC9D0000014DEB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				30AC52D618FC9D0000014DEB /* Chatter-Info.plist */,
+				30AC52D718FC9D0000014DEB /* InfoPlist.strings */,
+				30AC52DA18FC9D0000014DEB /* main.m */,
+				30AC52DC18FC9D0000014DEB /* Chatter-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		30AC52F118FC9D0000014DEB /* ChatterTests */ = {
+			isa = PBXGroup;
+			children = (
+				30AC52F718FC9D0000014DEB /* ChatterTests.m */,
+				30AC52F218FC9D0000014DEB /* Supporting Files */,
+			);
+			path = ChatterTests;
+			sourceTree = "<group>";
+		};
+		30AC52F218FC9D0000014DEB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				30AC52F318FC9D0000014DEB /* ChatterTests-Info.plist */,
+				30AC52F418FC9D0000014DEB /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		30AC52C818FC9D0000014DEB /* Chatter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30AC52FB18FC9D0000014DEB /* Build configuration list for PBXNativeTarget "Chatter" */;
+			buildPhases = (
+				30AC52C518FC9D0000014DEB /* Sources */,
+				30AC52C618FC9D0000014DEB /* Frameworks */,
+				30AC52C718FC9D0000014DEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Chatter;
+			productName = Chatter;
+			productReference = 30AC52C918FC9D0000014DEB /* Chatter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		30AC52E818FC9D0000014DEB /* ChatterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30AC52FE18FC9D0000014DEB /* Build configuration list for PBXNativeTarget "ChatterTests" */;
+			buildPhases = (
+				30AC52E518FC9D0000014DEB /* Sources */,
+				30AC52E618FC9D0000014DEB /* Frameworks */,
+				30AC52E718FC9D0000014DEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				30AC52F018FC9D0000014DEB /* PBXTargetDependency */,
+			);
+			name = ChatterTests;
+			productName = ChatterTests;
+			productReference = 30AC52E918FC9D0000014DEB /* ChatterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		30AC52C118FC9D0000014DEB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Danny;
+				TargetAttributes = {
+					30AC52E818FC9D0000014DEB = {
+						TestTargetID = 30AC52C818FC9D0000014DEB;
+					};
+				};
+			};
+			buildConfigurationList = 30AC52C418FC9D0000014DEB /* Build configuration list for PBXProject "Chatter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 30AC52C018FC9D0000014DEB;
+			productRefGroup = 30AC52CA18FC9D0000014DEB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				30AC52C818FC9D0000014DEB /* Chatter */,
+				30AC52E818FC9D0000014DEB /* ChatterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		30AC52C718FC9D0000014DEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30AC52D918FC9D0000014DEB /* InfoPlist.strings in Resources */,
+				30AC530218FC9D1500014DEB /* main.storyboard in Resources */,
+				30AC52E418FC9D0000014DEB /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30AC52E718FC9D0000014DEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30AC52F618FC9D0000014DEB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		30AC52C518FC9D0000014DEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30AC52DF18FC9D0000014DEB /* AppDelegate.m in Sources */,
+				30AC52E218FC9D0000014DEB /* Chatter.xcdatamodeld in Sources */,
+				30AC52DB18FC9D0000014DEB /* main.m in Sources */,
+				3005679418FDE6F20016B55D /* MultiPeerManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30AC52E518FC9D0000014DEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30AC52F818FC9D0000014DEB /* ChatterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		30AC52F018FC9D0000014DEB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 30AC52C818FC9D0000014DEB /* Chatter */;
+			targetProxy = 30AC52EF18FC9D0000014DEB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		30AC52D718FC9D0000014DEB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				30AC52D818FC9D0000014DEB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		30AC52F418FC9D0000014DEB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				30AC52F518FC9D0000014DEB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		30AC52F918FC9D0000014DEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		30AC52FA18FC9D0000014DEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		30AC52FC18FC9D0000014DEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Chatter/Chatter-Prefix.pch";
+				INFOPLIST_FILE = "Chatter/Chatter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		30AC52FD18FC9D0000014DEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Chatter/Chatter-Prefix.pch";
+				INFOPLIST_FILE = "Chatter/Chatter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		30AC52FF18FC9D0000014DEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Chatter.app/Chatter";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Chatter/Chatter-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ChatterTests/ChatterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		30AC530018FC9D0000014DEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Chatter.app/Chatter";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Chatter/Chatter-Prefix.pch";
+				INFOPLIST_FILE = "ChatterTests/ChatterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		30AC52C418FC9D0000014DEB /* Build configuration list for PBXProject "Chatter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30AC52F918FC9D0000014DEB /* Debug */,
+				30AC52FA18FC9D0000014DEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		30AC52FB18FC9D0000014DEB /* Build configuration list for PBXNativeTarget "Chatter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30AC52FC18FC9D0000014DEB /* Debug */,
+				30AC52FD18FC9D0000014DEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		30AC52FE18FC9D0000014DEB /* Build configuration list for PBXNativeTarget "ChatterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30AC52FF18FC9D0000014DEB /* Debug */,
+				30AC530018FC9D0000014DEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		30AC52E018FC9D0000014DEB /* Chatter.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				30AC52E118FC9D0000014DEB /* Chatter.xcdatamodel */,
+			);
+			currentVersion = 30AC52E118FC9D0000014DEB /* Chatter.xcdatamodel */;
+			path = Chatter.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 30AC52C118FC9D0000014DEB /* Project object */;
+}
