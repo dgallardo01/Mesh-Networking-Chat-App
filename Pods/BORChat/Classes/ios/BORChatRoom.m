@@ -175,7 +175,7 @@ static const int BORChatRoomDefaultSpacing = 10;
         return _messagePlaceholder;
     _messagePlaceholder = [[UILabel alloc] init];
     _messagePlaceholder.text = @"Text Message";
-    _messagePlaceholder.font = [UIFont systemFontOfSize:13];
+    _messagePlaceholder.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:13];
     _messagePlaceholder.textColor = UIColorFromRGB(0xc7c7cc);
     return _messagePlaceholder;
 }
@@ -185,9 +185,9 @@ static const int BORChatRoomDefaultSpacing = 10;
         return _messageSendButton;
     _messageSendButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     _messageSendButton.translatesAutoresizingMaskIntoConstraints = NO;
-    [_messageSendButton setTitle:@"Send" forState:UIControlStateNormal];
+    [_messageSendButton setTitle:@"Chat" forState:UIControlStateNormal];
     _messageSendButton.tintColor = UIColorFromRGB(0x8e8e93);
-    _messageSendButton.titleLabel.font = [UIFont boldSystemFontOfSize:_messageSendButton.titleLabel.font.pointSize];
+    _messageSendButton.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:_messageSendButton.titleLabel.font.pointSize];
     [_messageSendButton addConstraint:[NSLayoutConstraint constraintWithItem:_messageSendButton
         attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil
         attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:36.0]];
@@ -198,9 +198,8 @@ static const int BORChatRoomDefaultSpacing = 10;
 #pragma mark - Private
 
 - (void)sendMessage {
-    self.messageTextView.text = nil;
-    [self.messageTextView resignFirstResponder];
-
+        self.messageTextView.text = nil;
+        [self.messageTextView resignFirstResponder];
 }
 
 #pragma mark - Protocols
@@ -263,7 +262,13 @@ static const int BORChatRoomDefaultSpacing = 10;
 }
 
 - (void)addMessage:(id <BORChatMessage>)message scrollToMessage:(BOOL)scrollToMessage {
+    if([_messageTextView.text length] == 0)
+    {
+        return;
+    }
+    else{
     [self.chatCollectionViewController addMessage:message scrollToMessage:scrollToMessage];
+    }
 }
 
 @end

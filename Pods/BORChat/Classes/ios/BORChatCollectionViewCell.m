@@ -28,7 +28,7 @@ static NSCache *imageCache;
 @implementation BORChatCollectionViewCell
 
 + (void)initialize {
-    messageFont = [UIFont systemFontOfSize:15];
+    messageFont = [UIFont fontWithName:@"HelveticaNeue-Thin" size:15];
 }
 
 - (id)initWithFrame:(CGRect)frame {
