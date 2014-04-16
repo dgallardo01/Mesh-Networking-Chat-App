@@ -8,10 +8,12 @@
 
 #import "UserNameViewController.h"
 #import "ChatViewController.h"
+#import <FBShimmeringLayer.h>
 
 @interface UserNameViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *userNameTextField;
 @property(strong, nonatomic)ChatViewController *chatVC;
+@property (weak, nonatomic) IBOutlet UILabel *appNameLabel;
 
 @end
 

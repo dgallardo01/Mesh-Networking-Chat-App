@@ -1,10 +1,13 @@
 PODS:
   - BORChat (0.1.0)
+  - Shimmer (1.0.1)
 
 DEPENDENCIES:
   - BORChat
+  - Shimmer (~> 1.0)
 
 SPEC CHECKSUMS:
   BORChat: 406d9f2e97a9c3335de8fdeddf4df056288772ef
+  Shimmer: a1b92685f04ae7363e655f636a41a276dbb1507e
 
 COCOAPODS: 0.29.0

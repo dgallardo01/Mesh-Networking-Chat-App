@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-Shimmer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3E6CCC41FD10470DAF12AC15</key>
+		<key>7668B2DBBAAB4EAA9AAA130C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C306A638236048AEA3E3F8C8</key>
+		<key>BFCE00CDF49F4624A191DA56</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DBCE306DE2E346D1999AC6ED</key>
 		<dict>
 			<key>primary</key>
 			<true/>
