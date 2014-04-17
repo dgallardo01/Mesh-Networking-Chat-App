@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "160ECA4C96FD49299E665C73"
-               BuildableName = "libPods-BORChat.a"
-               BlueprintName = "Pods-BORChat"
+               BlueprintIdentifier = "BB38B4CD971346CBAF93F1CC"
+               BuildableName = "libPods-FontAwesomeKit.a"
+               BlueprintName = "Pods-FontAwesomeKit"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

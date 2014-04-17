@@ -20,6 +20,18 @@
 @implementation MultiPeerManager
 
 
+-(void)setupMultipeerBrowser
+{
+    
+}
+
+-(void)setupPeerAndSessionWithDisplayName:(NSString *)displayName
+{
+    self.peerID = [[MCPeerID alloc] initWithDisplayName:displayName];
+    self.session = [[MCSession alloc] initWithPeer:self.peerID];
+    self.session.delegate = self;
+}
+
 
 #pragma mark - MCSession Delegate Methods
 

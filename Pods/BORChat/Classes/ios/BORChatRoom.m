@@ -266,9 +266,7 @@ static const int BORChatRoomDefaultSpacing = 10;
     {
         return;
     }
-    else{
     [self.chatCollectionViewController addMessage:message scrollToMessage:scrollToMessage];
-    }
 }
 
 @end

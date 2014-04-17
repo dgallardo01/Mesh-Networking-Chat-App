@@ -9,6 +9,7 @@
 #import "ChatViewController.h"
 #import "BORChatMessage.h"
 #import "BORChatCollectionViewController.h"
+#import "EncounterDataStore.h"
 
 @interface ChatViewController ()
 
@@ -29,8 +30,16 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"Chatter";
+    self.title = @"chat";
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Browse" style:UIBarButtonItemStylePlain target:self action:nil];
+    
+    //Call datastore
+    EncounterDataStore *dataStore = [EncounterDataStore sharedInstance];
+    NSLog(@"%@",[dataStore getUserNameAtIndex:0]);
+    NSLog(@"%d",[dataStore count]);
 
+    UIImage *gearIcon = [UIImage imageNamed:@"settings-25"];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:gearIcon style:UIBarButtonItemStylePlain target:self action:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -60,7 +69,9 @@
 
         [self addMessage:message scrollToMessage:YES];
         [super sendMessage];
-
 }
+
+
+
 
 @end

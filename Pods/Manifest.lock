@@ -1,13 +1,30 @@
 PODS:
   - BORChat (0.1.0)
+  - FontAwesomeKit (2.1.5):
+    - FontAwesomeKit/Core
+    - FontAwesomeKit/FontAwesome
+    - FontAwesomeKit/FoundationIcons
+    - FontAwesomeKit/IonIcons
+    - FontAwesomeKit/Zocial
+  - FontAwesomeKit/Core (2.1.5)
+  - FontAwesomeKit/FontAwesome (2.1.5):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/FoundationIcons (2.1.5):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/IonIcons (2.1.5):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/Zocial (2.1.5):
+    - FontAwesomeKit/Core
   - Shimmer (1.0.1)
 
 DEPENDENCIES:
   - BORChat
+  - FontAwesomeKit (~> 2.1.0)
   - Shimmer (~> 1.0)
 
 SPEC CHECKSUMS:
   BORChat: 406d9f2e97a9c3335de8fdeddf4df056288772ef
+  FontAwesomeKit: 7d935e100337d503bdaefde2ea16be740b81ed13
   Shimmer: a1b92685f04ae7363e655f636a41a276dbb1507e
 
 COCOAPODS: 0.29.0

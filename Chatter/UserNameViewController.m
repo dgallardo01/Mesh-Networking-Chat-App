@@ -9,11 +9,13 @@
 #import "UserNameViewController.h"
 #import "ChatViewController.h"
 #import <FBShimmeringLayer.h>
+#import "EncounterDataStore.h"
 
 @interface UserNameViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *userNameTextField;
 @property(strong, nonatomic)ChatViewController *chatVC;
 @property (weak, nonatomic) IBOutlet UILabel *appNameLabel;
+@property(strong, nonatomic)EncounterDataStore *dataStore;
 
 @end
 
@@ -34,7 +36,7 @@
     // Do any additional setup after loading the view.
     
     self.chatVC = [[ChatViewController alloc]init];
-
+    self.dataStore = [EncounterDataStore sharedInstance];
     self.userNameTextField.delegate = self;
     [self.userNameTextField becomeFirstResponder];
 }
@@ -62,6 +64,10 @@
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:self.chatVC];
 
     [self presentViewController:navigationController animated:YES completion:nil];
+    
+    [self.dataStore addUsername:self.userNameTextField.text];
+    NSLog(@"%@", [self.dataStore getUserNameAtIndex:0]);
+    
     return YES;
     
     
