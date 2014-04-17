@@ -13,6 +13,8 @@
 
 @interface ChatViewController ()
 
+@property (strong, nonatomic)MultiPeerManager *multipeerManager;
+
 @end
 
 @implementation ChatViewController
@@ -31,15 +33,22 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"chat";
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Browse" style:UIBarButtonItemStylePlain target:self action:nil];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Browse" style:UIBarButtonItemStylePlain target:self action:@selector(browserSetup)];
+    
+    //Initiate a multipeer manager
+    self.multipeerManager = [[MultiPeerManager alloc]init];
     
     //Call datastore
     EncounterDataStore *dataStore = [EncounterDataStore sharedInstance];
     NSLog(@"%@",[dataStore getUserNameAtIndex:0]);
     NSLog(@"%d",[dataStore count]);
-
-    UIImage *gearIcon = [UIImage imageNamed:@"settings-25"];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:gearIcon style:UIBarButtonItemStylePlain target:self action:nil];
+    
+    //Create Gear Icon
+    [self createGearButton];
+    
+    //Advertiser
+    [self.multipeerManager setupPeerAndSessionWithDisplayName:[dataStore getUserNameAtIndex:0]];
+    [self.multipeerManager advertiseSelf:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -71,7 +80,27 @@
         [super sendMessage];
 }
 
+-(void)browserSetup
+{
+    [self.multipeerManager setupMultipeerBrowser];
+    [self.multipeerManager.browser setDelegate:self];
+    [self presentViewController:self.multipeerManager.browser animated:YES completion:nil];
+}
 
+-(void)browserViewControllerDidFinish:(MCBrowserViewController *)browserViewController
+{
+    [self dismissViewControllerAnimated:YES completion:nil];    
+}
 
+-(void)browserViewControllerWasCancelled:(MCBrowserViewController *)browserViewController
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void) createGearButton
+{
+    UIImage *gearIcon = [UIImage imageNamed:@"settings-25"];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:gearIcon style:UIBarButtonItemStylePlain target:self action:nil];
+}
 
 @end

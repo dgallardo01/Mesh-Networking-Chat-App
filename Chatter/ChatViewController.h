@@ -7,7 +7,10 @@
 //
 
 #import "BORChatRoom.h"
+#import "MultiPeerManager.h"
+#import <MultipeerConnectivity/MultipeerConnectivity.h>
 
-@interface ChatViewController : BORChatRoom
+
+@interface ChatViewController : BORChatRoom <MCBrowserViewControllerDelegate>
 
 @end

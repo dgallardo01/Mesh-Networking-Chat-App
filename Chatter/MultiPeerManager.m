@@ -10,19 +10,29 @@
 
 @interface MultiPeerManager ()
 
-@property (strong, nonatomic)MCPeerID *peerID;
-@property (strong, nonatomic)MCSession *session;
-@property (strong, nonatomic)MCBrowserViewController *browser;
-@property (strong, nonatomic)MCAdvertiserAssistant *advertiserAssistant;
 
 @end
 
 @implementation MultiPeerManager
 
+-(instancetype)init
+{
+    self = [super init];
+    
+    if(self)
+    {
+        _peerID = nil;
+        _session = nil;
+        _browser = nil;
+        _advertiserAssistant = nil;
+    }
+    return self;
+}
 
 -(void)setupMultipeerBrowser
 {
-    
+    self.browser = [[MCBrowserViewController alloc] initWithServiceType:@"chatter"
+                                                                session:self.session];
 }
 
 -(void)setupPeerAndSessionWithDisplayName:(NSString *)displayName
@@ -32,6 +42,21 @@
     self.session.delegate = self;
 }
 
+-(void) advertiseSelf:(BOOL)shouldAdvertise
+{
+    if(shouldAdvertise)
+    {
+        self.advertiserAssistant = [[MCAdvertiserAssistant alloc] initWithServiceType:@"chatter"
+                                                                        discoveryInfo:nil
+                                                                              session:self.session];
+        [self.advertiserAssistant start];
+    }
+    else
+    {
+        [self.advertiserAssistant stop];
+        self.advertiserAssistant = nil;
+    }
+}
 
 #pragma mark - MCSession Delegate Methods
 
@@ -60,6 +85,12 @@
     
 }
 
+#pragma mark - Access Properties
 
+
+-(MCPeerID *)getPeerID
+{
+    return self.peerID;
+}
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MultiPeerManager.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
