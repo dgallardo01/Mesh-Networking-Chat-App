@@ -11,6 +11,6 @@
 #import <MultipeerConnectivity/MultipeerConnectivity.h>
 
 
-@interface ChatViewController : BORChatRoom <MCBrowserViewControllerDelegate>
+@interface ChatViewController : BORChatRoom <MCBrowserViewControllerDelegate, UITextFieldDelegate>
 
 @end

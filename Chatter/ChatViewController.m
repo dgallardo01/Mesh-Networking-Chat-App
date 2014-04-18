@@ -14,6 +14,8 @@
 @interface ChatViewController ()
 
 @property (strong, nonatomic)MultiPeerManager *multipeerManager;
+-(void)peerDidChangeStateWithNotification:(NSNotification *)notification;
+-(void)didReceiveDataWithNotification:(NSNotification *)notification;
 
 @end
 
@@ -46,9 +48,22 @@
     //Create Gear Icon
     [self createGearButton];
     
+    
     //Advertiser
     [self.multipeerManager setupPeerAndSessionWithDisplayName:[dataStore getUserNameAtIndex:0]];
     [self.multipeerManager advertiseSelf:YES];
+    
+    //Notification of changed state
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(peerDidChangeStateWithNotification:)
+                                                 name:@"MCDidChangeStateNotification"
+                                               object:nil];
+    
+    //Notification of received data
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(didReceiveDataWithNotification:)
+                                                 name:@"MCDidReceiveDataNotification"
+                                               object:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,28 +73,43 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 -(void)sendMessage
 {
-
-        id <BORChatMessage> message = [[BORChatMessage alloc] init];
-        message.text = self.messageTextView.text;
-        message.sentByCurrentUser = YES;
-        message.date = [NSDate date];
-
-        [self addMessage:message scrollToMessage:YES];
-        [super sendMessage];
+    
+    id <BORChatMessage> message = [[BORChatMessage alloc] init];
+    message.text = self.messageTextView.text;
+    message.sentByCurrentUser = YES;
+    message.date = [NSDate date];
+    
+    [self addMessage:message scrollToMessage:YES];
+    
+    NSData *dataToSend = [message.text dataUsingEncoding:NSUTF8StringEncoding];
+    //send message to all connected users.
+    NSArray *allPeers = self.multipeerManager.session.connectedPeers;
+    NSError *error;
+    
+    [self.multipeerManager.session sendData:dataToSend
+                                    toPeers:allPeers
+                                   withMode:MCSessionSendDataReliable
+                                      error:&error];
+    
+    if (error)
+    {
+        NSLog(@"%@", [error localizedDescription]);
+    }
+    
+    [super sendMessage];
 }
-
 -(void)browserSetup
 {
     [self.multipeerManager setupMultipeerBrowser];
@@ -89,7 +119,7 @@
 
 -(void)browserViewControllerDidFinish:(MCBrowserViewController *)browserViewController
 {
-    [self dismissViewControllerAnimated:YES completion:nil];    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void)browserViewControllerWasCancelled:(MCBrowserViewController *)browserViewController
@@ -103,4 +133,33 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:gearIcon style:UIBarButtonItemStylePlain target:self action:nil];
 }
 
+#pragma mark - Notification Center Methods
+-(void)peerDidChangeStateWithNotification:(NSNotification *)notification
+{
+    
+}
+
+-(void)didReceiveDataWithNotification:(NSNotification *)notification
+{
+    MCPeerID *peerID = [[notification userInfo] objectForKey:@"peerID"];
+    NSString *peerDisplayName = peerID.displayName;
+    
+    NSData *receivedData = [[notification userInfo] objectForKey:@"data"];
+    NSString *receivedText = [[NSString alloc] initWithData:receivedData encoding:NSUTF8StringEncoding];
+    
+    id <BORChatMessage> message = [[BORChatMessage alloc] init];
+    message.text = receivedText;
+    message.senderName = peerDisplayName;
+    message.date = [NSDate date];
+    
+    
+    //    [self.messageTextView performSelectorOnMainThread:@selector(sendMessage) withObject:[self.messageTextView.text stringByAppendingString:[NSString stringWithFormat:@"Text: %@", receivedText]] waitUntilDone:NO];
+    //        [self addMessage:message scrollToMessage:YES];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self addMessage:message scrollToMessage:YES];
+        [super sendMessage];
+    });
+}
+
 @end
+
