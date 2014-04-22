@@ -16,6 +16,7 @@
 		301C85511900E75E00DACDC1 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 301C85501900E75E00DACDC1 /* SettingsViewController.m */; };
 		307D9C79190626FB00421588 /* ChatterBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 307D9C78190626FB00421588 /* ChatterBG.png */; };
 		307D9C7B1906278100421588 /* ChatterBG2.png in Resources */ = {isa = PBXBuildFile; fileRef = 307D9C7A1906278100421588 /* ChatterBG2.png */; };
+		307D9C7F1906AC7600421588 /* chatterBrowseIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 307D9C7E1906AC7600421588 /* chatterBrowseIcon.png */; };
 		30AC52CD18FC9D0000014DEB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30AC52CC18FC9D0000014DEB /* Foundation.framework */; };
 		30AC52CF18FC9D0000014DEB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30AC52CE18FC9D0000014DEB /* CoreGraphics.framework */; };
 		30AC52D118FC9D0000014DEB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30AC52D018FC9D0000014DEB /* UIKit.framework */; };
@@ -60,6 +61,7 @@
 		301C85501900E75E00DACDC1 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		307D9C78190626FB00421588 /* ChatterBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ChatterBG.png; sourceTree = "<group>"; };
 		307D9C7A1906278100421588 /* ChatterBG2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ChatterBG2.png; sourceTree = "<group>"; };
+		307D9C7E1906AC7600421588 /* chatterBrowseIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chatterBrowseIcon.png; sourceTree = "<group>"; };
 		30AC52C918FC9D0000014DEB /* Chatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30AC52CC18FC9D0000014DEB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		30AC52CE18FC9D0000014DEB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -166,6 +168,7 @@
 				300567A218FF378D0016B55D /* settings-25.png */,
 				307D9C78190626FB00421588 /* ChatterBG.png */,
 				307D9C7A1906278100421588 /* ChatterBG2.png */,
+				307D9C7E1906AC7600421588 /* chatterBrowseIcon.png */,
 				30AC52D518FC9D0000014DEB /* Supporting Files */,
 			);
 			path = Chatter;
@@ -279,6 +282,7 @@
 			files = (
 				307D9C79190626FB00421588 /* ChatterBG.png in Resources */,
 				30AC52D918FC9D0000014DEB /* InfoPlist.strings in Resources */,
+				307D9C7F1906AC7600421588 /* chatterBrowseIcon.png in Resources */,
 				30AC530218FC9D1500014DEB /* main.storyboard in Resources */,
 				300567A318FF378D0016B55D /* settings-25.png in Resources */,
 				30AC52E418FC9D0000014DEB /* Images.xcassets in Resources */,

@@ -101,7 +101,7 @@ static NSCache *imageCache;
     _messageTextView.translatesAutoresizingMaskIntoConstraints = NO;
     _messageTextView.editable = NO;
     _messageTextView.font = messageFont;
-    _messageTextView.scrollsToTop = NO;
+    _messageTextView.scrollsToTop = YES; //Test
     self.textViewWidthConstraint = [NSLayoutConstraint constraintWithItem:_messageTextView
         attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil
         attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:0];
@@ -207,7 +207,7 @@ static NSCache *imageCache;
         [self.contentView addConstraint:self.rightTimeLabelAlignmentConstraint];
     }
     else {
-        self.messageTextView.textColor = [UIColor darkTextColor];
+        self.messageTextView.textColor = [UIColor lightTextColor];
 
         UIImage *image;
         if (self.message.lastMessageInARow)

@@ -11,6 +11,7 @@
 #import "BORChatCollectionViewController.h"
 #import "EncounterDataStore.h"
 #import "SettingsViewController.h"
+#import <FontAwesomeKit.h>
 
 @interface ChatViewController ()
 
@@ -37,10 +38,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"Encounter";
-//    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
-//    self.navigationController.navigationBar.shadowImage = [UIImage new];
-//    self.navigationController.navigationBar.translucent = YES;
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(browserSetup)];
+    FAKFontAwesome *usersIcon = [FAKFontAwesome usersIconWithSize:20.0f];
+    [usersIcon addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor]];
+
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageWithStackedIcons:@[usersIcon] imageSize:CGSizeMake(30, 30)] style:UIBarButtonItemStylePlain target:self action:@selector(browserSetup)];
     [self.navigationItem.leftBarButtonItem setTintColor:[UIColor blackColor]];
 
     
@@ -174,9 +175,6 @@
     message.senderName = peerDisplayName;
     message.date = [NSDate date];
     
-    
-    //    [self.messageTextView performSelectorOnMainThread:@selector(sendMessage) withObject:[self.messageTextView.text stringByAppendingString:[NSString stringWithFormat:@"Text: %@", receivedText]] waitUntilDone:NO];
-    //        [self addMessage:message scrollToMessage:YES];
     dispatch_async(dispatch_get_main_queue(), ^{
         [self addMessage:message scrollToMessage:YES];
         [super sendMessage];
