@@ -158,6 +158,8 @@ static const int BORChatRoomDefaultSpacing = 10;
         return _messageTextView;
     _messageTextView = [[UITextView alloc] init];
     _messageTextView.translatesAutoresizingMaskIntoConstraints = NO;
+    [_messageTextView setAlpha:.5];
+    _messageTextView.textColor = [UIColor blackColor];
     _messageTextView.scrollsToTop = NO;
     _messageTextView.backgroundColor = [UIColor whiteColor];
     _messageTextView.layer.cornerRadius = 5;
@@ -175,11 +177,17 @@ static const int BORChatRoomDefaultSpacing = 10;
 
 - (UILabel *)messagePlaceholder {
     if (_messagePlaceholder)
+    {
         return _messagePlaceholder;
+    }
+    else
+    {
     _messagePlaceholder = [[UILabel alloc] init];
     _messagePlaceholder.text = @"Text Message";
     _messagePlaceholder.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:13];
-    _messagePlaceholder.textColor = UIColorFromRGB(0xc7c7cc);
+//    _messagePlaceholder.textColor = UIColorFromRGB(0xc7c7cc);
+    _messagePlaceholder.textColor = [UIColor whiteColor];
+    }
     return _messagePlaceholder;
 }
 
