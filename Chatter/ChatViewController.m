@@ -10,10 +10,12 @@
 #import "BORChatMessage.h"
 #import "BORChatCollectionViewController.h"
 #import "EncounterDataStore.h"
+#import "SettingsViewController.h"
 
 @interface ChatViewController ()
 
 @property (strong, nonatomic)MultiPeerManager *multipeerManager;
+@property(strong, nonatomic)EncounterDataStore *dataStore;
 -(void)peerDidChangeStateWithNotification:(NSNotification *)notification;
 -(void)didReceiveDataWithNotification:(NSNotification *)notification;
 
@@ -34,23 +36,27 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"chat";
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Browse" style:UIBarButtonItemStylePlain target:self action:@selector(browserSetup)];
+    self.title = @"Encounter";
+//    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+//    self.navigationController.navigationBar.shadowImage = [UIImage new];
+//    self.navigationController.navigationBar.translucent = YES;
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(browserSetup)];
+    [self.navigationItem.leftBarButtonItem setTintColor:[UIColor whiteColor]];
     
     //Initiate a multipeer manager
     self.multipeerManager = [[MultiPeerManager alloc]init];
     
     //Call datastore
-    EncounterDataStore *dataStore = [EncounterDataStore sharedInstance];
-    NSLog(@"%@",[dataStore getUserNameAtIndex:0]);
-    NSLog(@"%d",[dataStore count]);
+    self.dataStore = [EncounterDataStore sharedInstance];
+    NSLog(@"%@",[self.dataStore getUserNameAtIndex:0]);
+    NSLog(@"%d",[self.dataStore count]);
     
     //Create Gear Icon
-    [self createGearButton];
+    //    [self createGearButton];
     
     
     //Advertiser
-    [self.multipeerManager setupPeerAndSessionWithDisplayName:[dataStore getUserNameAtIndex:0]];
+    [self.multipeerManager setupPeerAndSessionWithDisplayName:[self.dataStore getUserNameAtIndex:0]];
     [self.multipeerManager advertiseSelf:YES];
     
     //Notification of changed state
@@ -64,6 +70,14 @@
                                              selector:@selector(didReceiveDataWithNotification:)
                                                  name:@"MCDidReceiveDataNotification"
                                                object:nil];
+}
+
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.multipeerManager.peerID = [[MCPeerID alloc]initWithDisplayName:[self.dataStore getUserNameAtIndex:0]];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -130,7 +144,14 @@
 -(void) createGearButton
 {
     UIImage *gearIcon = [UIImage imageNamed:@"settings-25"];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:gearIcon style:UIBarButtonItemStylePlain target:self action:nil];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:gearIcon style:UIBarButtonItemStylePlain target:self action:@selector(settings)];
+}
+-(void)settings
+{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"main" bundle:nil];
+    SettingsViewController *settingsVC = [storyboard instantiateViewControllerWithIdentifier:@"settingsVC"];
+    [self presentViewController:settingsVC animated:YES completion:nil];
+    
 }
 
 #pragma mark - Notification Center Methods
@@ -159,6 +180,11 @@
         [self addMessage:message scrollToMessage:YES];
         [super sendMessage];
     });
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
 }
 
 @end

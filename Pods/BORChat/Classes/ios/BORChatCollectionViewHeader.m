@@ -27,12 +27,14 @@ static NSDateFormatter *dateFormatter;
     self =  [super initWithFrame:frame];
     if (!self)
         return nil;
-    self.backgroundColor = [UIColor whiteColor];
+    self.backgroundColor = [UIColor clearColor]; //header for message
     self.sectionLabel = [[UILabel alloc] init];
 //    sectionLabel.text = [self.messagesBySections[indexPath.section][0] date].description;
     self.sectionLabel.textAlignment = NSTextAlignmentCenter;
     self.sectionLabel.font = [UIFont systemFontOfSize:11];
-    self.sectionLabel.textColor = UIColorFromRGB(0x8e8e93);
+//    self.sectionLabel.textColor = UIColorFromRGB(0x8e8e93);yes
+    self.sectionLabel.textColor = [UIColor whiteColor];
+
     CGRect rect = self.bounds;
     rect.origin.y += 10;
     rect.size.height -= 10;
@@ -70,6 +72,7 @@ static NSDateFormatter *dateFormatter;
     [attributedString addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:11]
         range:NSMakeRange(0, [string rangeOfString:aString options:NSRegularExpressionSearch].location +1)];
     self.sectionLabel.attributedText = attributedString;
+    self.sectionLabel.backgroundColor = [UIColor clearColor]; //Date Color
 }
 
 @end

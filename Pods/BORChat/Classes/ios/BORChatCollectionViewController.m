@@ -31,6 +31,7 @@
 - (void)viewDidLoad {
 //    self.collectionView.backgroundColor = [UIColor colorWithRed:0.7 green:1 blue:0.7 alpha:1.0];
     self.collectionView.backgroundColor = [UIColor whiteColor];
+    self.collectionView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ChatterBG.png"]];
     self.collectionView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
     self.collectionView.alwaysBounceVertical = YES;
     [self.collectionView registerClass:[BORChatCollectionViewCell class]

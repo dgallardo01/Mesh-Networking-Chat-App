@@ -27,10 +27,15 @@
     return _sharedDataStore;
 }
 
--(void) addUsername:(NSString *)username
+-(void) addUsername:(NSString *)userName
 {
     self.userNames = [NSMutableArray new];
-    [self.userNames addObject:username];
+    [self.userNames addObject:userName];
+}
+
+-(void)changeUserName:(NSString *)userName
+{
+    [self.userNames replaceObjectAtIndex:0 withObject:userName];
 }
 
 -(void)removeUserName
@@ -47,4 +52,5 @@
 {
     return [self.userNames count];
 }
+
 @end

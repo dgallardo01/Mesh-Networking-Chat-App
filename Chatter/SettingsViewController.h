@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MultiPeerManager.h"
 
-@interface SettingsViewController : UIViewController
+@interface SettingsViewController : UIViewController <UITextFieldDelegate, MCBrowserViewControllerDelegate>
 
 @end

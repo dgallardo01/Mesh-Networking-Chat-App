@@ -13,28 +13,30 @@
                         <viewControllerLayoutGuide type="bottom" id="cQ2-ii-xQT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="JvT-h6-TKY">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="O6c-yG-bpI">
-                        <barButtonItem key="leftBarButtonItem" title="Browse" id="bSc-7S-r5n"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="bSc-7S-r5n">
+                            <color key="tintColor" red="0.99043582080000003" green="0.96422081829999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aKO-m3-LLl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="849" y="33"/>
         </scene>
-        <!--Settings View Controller-->
+        <!--Settings View Controller - Title-->
         <scene sceneID="2BR-8D-aVe">
             <objects>
-                <viewController id="QCf-Vy-kMz" customClass="SettingsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="settingsVC" id="QCf-Vy-kMz" customClass="SettingsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fc1-FM-anv"/>
                         <viewControllerLayoutGuide type="bottom" id="giJ-tO-d8W"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="sx7-ES-kG4">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="USERNAME" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fGT-Qk-WL7">
@@ -50,9 +52,20 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPI-1V-8ZD">
+                                <rect key="frame" x="254" y="20" width="37" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="settingsDoneButtonTapped:" destination="QCf-Vy-kMz" eventType="touchUpInside" id="U6D-0m-SxJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="MYb-iK-fEy"/>
                     <connections>
                         <outlet property="usernameTextField" destination="fGT-Qk-WL7" id="mCs-Jb-5lG"/>
                     </connections>
@@ -70,14 +83,18 @@
                         <viewControllerLayoutGuide type="bottom" id="QKn-Ws-0XZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="k9A-Tn-Njz">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Ao-kL-YQs">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ENCOUNTER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6c-r4-Wn0">
                                 <rect key="frame" x="20" y="129" width="280" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="40"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.99043582080000003" green="0.96422081829999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="USERNAME" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kbw-qq-BOi">
@@ -92,6 +109,7 @@
                     <connections>
                         <outlet property="appNameLabel" destination="g6c-r4-Wn0" id="FHR-x9-bTY"/>
                         <outlet property="userNameTextField" destination="kbw-qq-BOi" id="lqq-c4-Fx1"/>
+                        <outlet property="usernameBackground" destination="5Ao-kL-YQs" id="Fug-mB-Jhl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ovm-RM-bGu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -121,6 +139,6 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>

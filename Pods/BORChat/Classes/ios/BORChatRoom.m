@@ -50,6 +50,9 @@ static const int BORChatRoomDefaultSpacing = 10;
     self.chatCollectionViewController = [[BORChatCollectionViewController alloc] initWithCollectionViewLayout:[[BORSpringFlowLayout alloc] init]];
     UICollectionView *collectionView = self.chatCollectionViewController.collectionView;
     collectionView.frame = self.view.bounds;
+    collectionView.backgroundColor = [UIColor whiteColor];
+
+//    collectionView.color = [UIImage imageNamed:@"ChatterBG.png"];
 //    collectionView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
 //    collectionView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:collectionView];

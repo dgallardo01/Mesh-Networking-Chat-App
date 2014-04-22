@@ -20,4 +20,6 @@
 
 -(NSInteger) count;
 
+-(void)changeUserName:(NSString *)userName;
+
 @end

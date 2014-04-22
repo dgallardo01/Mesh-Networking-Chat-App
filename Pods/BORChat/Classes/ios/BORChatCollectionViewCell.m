@@ -228,10 +228,18 @@ static NSCache *imageCache;
 
 - (UIColor *)bubbleColor {
     UIColor *color;
+
+
     if([self.message respondsToSelector:@selector(bubbleColor)])
+    {
         color = self.message.bubbleColor;
+    }
     if(!color)
-        color = self.message.sentByCurrentUser ? UIColorFromRGB(0x047eff) : UIColorFromRGB(0xe5e5ea);
+    {
+//        color = self.message.sentByCurrentUser ? [UIColor colorWithRed:60/255.0f green:64/255.0f blue:66/255.0f alpha:1.0f] : [UIColor colorWithRed:150/255.0f green:164/255.0f blue:166/255.0f alpha:1.0f];
+        color = self.message.sentByCurrentUser ? [UIColor clearColor] : [UIColor clearColor];
+
+    }
     return color;
 }
 

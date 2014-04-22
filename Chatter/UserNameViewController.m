@@ -16,6 +16,7 @@
 @property(strong, nonatomic)ChatViewController *chatVC;
 @property (weak, nonatomic) IBOutlet UILabel *appNameLabel;
 @property(strong, nonatomic)EncounterDataStore *dataStore;
+@property (weak, nonatomic) IBOutlet UIImageView *usernameBackground;
 
 @end
 
@@ -38,7 +39,9 @@
     self.chatVC = [[ChatViewController alloc]init];
     self.dataStore = [EncounterDataStore sharedInstance];
     self.userNameTextField.delegate = self;
+    self.userNameTextField.textColor = [UIColor whiteColor];
     [self.userNameTextField becomeFirstResponder];
+    self.usernameBackground.image = [UIImage imageNamed:@"ChatterBG.png"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -69,9 +72,11 @@
     NSLog(@"%@", [self.dataStore getUserNameAtIndex:0]);
     
     return YES;
-    
-    
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
 
 @end
