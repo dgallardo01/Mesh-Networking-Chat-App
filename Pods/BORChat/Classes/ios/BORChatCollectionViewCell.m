@@ -101,7 +101,7 @@ static NSCache *imageCache;
     _messageTextView.translatesAutoresizingMaskIntoConstraints = NO;
     _messageTextView.editable = NO;
     _messageTextView.font = messageFont;
-    _messageTextView.scrollsToTop = YES;
+    _messageTextView.scrollsToTop = NO;
     self.textViewWidthConstraint = [NSLayoutConstraint constraintWithItem:_messageTextView
         attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil
         attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:0];
