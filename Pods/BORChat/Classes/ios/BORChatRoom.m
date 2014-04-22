@@ -158,7 +158,7 @@ static const int BORChatRoomDefaultSpacing = 10;
         return _messageTextView;
     _messageTextView = [[UITextView alloc] init];
     _messageTextView.translatesAutoresizingMaskIntoConstraints = NO;
-    _messageTextView.scrollsToTop = NO;
+    _messageTextView.scrollsToTop = YES;
     _messageTextView.backgroundColor = [UIColor whiteColor];
     _messageTextView.layer.cornerRadius = 5;
     _messageTextView.layer.borderColor = UIColorFromRGB(0xc8c8cd).CGColor;
