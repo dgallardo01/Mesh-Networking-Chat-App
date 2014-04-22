@@ -41,7 +41,8 @@
 //    self.navigationController.navigationBar.shadowImage = [UIImage new];
 //    self.navigationController.navigationBar.translucent = YES;
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(browserSetup)];
-    [self.navigationItem.leftBarButtonItem setTintColor:[UIColor whiteColor]];
+    [self.navigationItem.leftBarButtonItem setTintColor:[UIColor blackColor]];
+
     
     //Initiate a multipeer manager
     self.multipeerManager = [[MultiPeerManager alloc]init];

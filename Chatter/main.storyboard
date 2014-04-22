@@ -116,25 +116,6 @@
             </objects>
             <point key="canvasLocation" x="35" y="33"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="REJ-Fn-jAh">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BFc-aG-hqo" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="22x-at-LI4"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EmA-M5-9Yr">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="GsO-sY-adI" kind="relationship" relationship="rootViewController" id="c3A-Sr-fbc"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WHX-mL-LS7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="434" y="33"/>
-        </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
