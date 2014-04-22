@@ -9,9 +9,9 @@
 #import "BORSpringFlowLayout.h"
 
 #define UIColorFromRGB(rgbValue) [UIColor \
-       colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
-       green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
-       blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
+blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 static const int BORChatRoomMessageContainerHeight = 40;
 static const int BORChatRoomDefaultSpacing = 10;
@@ -45,37 +45,37 @@ static const int BORChatRoomDefaultSpacing = 10;
 }
 
 - (void)viewDidLoad {
-
-//    self.chatCollectionViewController = [[BORChatCollectionViewController alloc] initWithCollectionViewLayout:[[UICollectionViewFlowLayout alloc] init]];
+    
+    //    self.chatCollectionViewController = [[BORChatCollectionViewController alloc] initWithCollectionViewLayout:[[UICollectionViewFlowLayout alloc] init]];
     self.chatCollectionViewController = [[BORChatCollectionViewController alloc] initWithCollectionViewLayout:[[BORSpringFlowLayout alloc] init]];
     UICollectionView *collectionView = self.chatCollectionViewController.collectionView;
     collectionView.frame = self.view.bounds;
     collectionView.backgroundColor = [UIColor whiteColor];
-
-//    collectionView.color = [UIImage imageNamed:@"ChatterBG.png"];
-//    collectionView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-//    collectionView.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    //    collectionView.color = [UIImage imageNamed:@"ChatterBG.png"];
+    //    collectionView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    //    collectionView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:collectionView];
-
-//    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[collectionView]|" options:NSLayoutFormatAlignmentMask metrics:nil views:@{@"collectionView" : collectionView}]];
-//    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[collectionView][messageContainer]" options:NSLayoutFormatAlignAllCenterX metrics:nil views:@{@"collectionView" : collectionView, @"messageContainer" : self.messageContainer}]];
-
-
+    
+    //    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[collectionView]|" options:NSLayoutFormatAlignmentMask metrics:nil views:@{@"collectionView" : collectionView}]];
+    //    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[collectionView][messageContainer]" options:NSLayoutFormatAlignAllCenterX metrics:nil views:@{@"collectionView" : collectionView, @"messageContainer" : self.messageContainer}]];
+    
+    
     [self.view addSubview:self.messageContainer];
-
+    
     NSDictionary *views = @{@"messageContainer" : self.messageContainer};
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[messageContainer]|"
-        options:NSLayoutFormatAlignmentMask metrics:nil views:views]];
+                                                                      options:NSLayoutFormatAlignmentMask metrics:nil views:views]];
     NSArray *constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:[messageContainer(>=height)]|"
-        options:NSLayoutFormatAlignmentMask metrics:@{@"height" : @(BORChatRoomMessageContainerHeight)} views:views];
+                                                                   options:NSLayoutFormatAlignmentMask metrics:@{@"height" : @(BORChatRoomMessageContainerHeight)} views:views];
     self.bottomSpacingConstraint = constraints.lastObject;
     [self.view addConstraints:constraints];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:)
-        name:UIKeyboardWillShowNotification object:nil];
+                                                 name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:)
-        name:UIKeyboardWillHideNotification object:nil];
+                                                 name:UIKeyboardWillHideNotification object:nil];
     [self configureInsetsOfCollectionView:collectionView];
-
+    
 }
 
 
@@ -95,15 +95,15 @@ static const int BORChatRoomDefaultSpacing = 10;
     if (!self.bottomSpacingConstraint) {
         self.view.translatesAutoresizingMaskIntoConstraints = NO;
         [self.view.superview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[view]|"
-            options:NSLayoutFormatAlignmentMask metrics:nil views:@{@"view" : self.view}]];
+                                                                                    options:NSLayoutFormatAlignmentMask metrics:nil views:@{@"view" : self.view}]];
         [self.view.superview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[view]"
-            options:NSLayoutFormatAlignmentMask metrics:nil views:@{@"view" : self.view}]];
+                                                                                    options:NSLayoutFormatAlignmentMask metrics:nil views:@{@"view" : self.view}]];
         self.bottomSpacingConstraint = [NSLayoutConstraint constraintWithItem:self.view
-            attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view.superview
-            attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0];
+                                                                    attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view.superview
+                                                                    attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0];
         [self.view.superview addConstraint:self.bottomSpacingConstraint];
     }
-
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -119,37 +119,37 @@ static const int BORChatRoomDefaultSpacing = 10;
 - (UIView *)messageContainer {
     if (_messageContainer)
         return _messageContainer;
-
+    
     _messageContainer = [[UIView alloc] init];
     _messageContainer.translatesAutoresizingMaskIntoConstraints = NO;
     UIToolbar *blurToolbar = [[UIToolbar alloc] initWithFrame:self.view.bounds];
     blurToolbar.autoresizingMask = self.view.autoresizingMask;
+    [blurToolbar setBackgroundImage:[UIImage imageNamed:@"ChatterBG.png"] forToolbarPosition:UIToolbarPositionAny barMetrics:UIBarMetricsDefault];
+    [blurToolbar setBackgroundImage:[[UIImage alloc]init] forToolbarPosition:UIToolbarPositionAny barMetrics:UIBarMetricsDefault];
+    //    blurToolbar.translucent = YES;
     [_messageContainer addSubview:blurToolbar];
-
     UIView *separatorView = [[UIView alloc] init];
     separatorView.backgroundColor =  UIColorFromRGB(0xadadad);
     separatorView.translatesAutoresizingMaskIntoConstraints = NO;
-//    [separatorView addConstraint:[NSLayoutConstraint constraintWithItem:separatorView attribute:NSLayoutAttributeHeight
-//        relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1
-//        constant:1]];
+    //    [separatorView addConstraint:[NSLayoutConstraint constraintWithItem:separatorView attribute:NSLayoutAttributeHeight
+    //        relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1
+    //        constant:1]];
     separatorView.frame = CGRectMake(0, 0, 0, 0.5);
     [_messageContainer addSubview:separatorView];
     [_messageContainer addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[separatorView]|"
-        options:NSLayoutFormatAlignAllTop metrics:nil views:@{@"separatorView" : separatorView}]];
-//    [_messageContainer addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(-0.5)-[separatorView]"
-//        options:NSLayoutFormatAlignAllTop metrics:nil views:@{@"separatorView" : separatorView}]];`
-
-
+                                                                              options:NSLayoutFormatAlignAllTop metrics:nil views:@{@"separatorView" : separatorView}]];
+    //    [_messageContainer addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(-0.5)-[separatorView]"
+    //        options:NSLayoutFormatAlignAllTop metrics:nil views:@{@"separatorView" : separatorView}]];`
     [_messageContainer addSubview:self.messageTextView];
     [_messageContainer addSubview:self.messageSendButton];
     NSDictionary *views = @{@"messageTextView" : self.messageTextView, @"messageSendButton" : self.messageSendButton};
     [_messageContainer addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-s-[messageTextView]-s-[messageSendButton(44)]-s-|"
-        options:NSLayoutFormatAlignAllBaseline metrics:@{@"s" : @(BORChatRoomDefaultSpacing)} views:views]];
+                                                                              options:NSLayoutFormatAlignAllBaseline metrics:@{@"s" : @(BORChatRoomDefaultSpacing)} views:views]];
     [_messageContainer addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-t-[messageTextView]-b-|"
-        options:NSLayoutFormatAlignAllBottom metrics:@{@"t" : @(7), @"b": @(5)} views:views]];
+                                                                              options:NSLayoutFormatAlignAllBottom metrics:@{@"t" : @(7), @"b": @(5)} views:views]];
     [_messageContainer addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[messageSendButton]|"
-        options:NSLayoutFormatAlignAllBottom metrics:nil views:views]];
-
+                                                                              options:NSLayoutFormatAlignAllBottom metrics:nil views:views]];
+    
     return _messageContainer;
 }
 
@@ -165,11 +165,11 @@ static const int BORChatRoomDefaultSpacing = 10;
     _messageTextView.layer.borderWidth = 0.5;
     _messageTextView.delegate = self;
     self.messageTextViewHeightConstraint = [NSLayoutConstraint constraintWithItem:_messageTextView
-        attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil
-        attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0
-        constant:BORChatRoomMessageContainerHeight - 7 - 5];
+                                                                        attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil
+                                                                        attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0
+                                                                         constant:BORChatRoomMessageContainerHeight - 7 - 5];
     [_messageTextView addConstraint:self.messageTextViewHeightConstraint];
-
+    
     return _messageTextView;
 }
 
@@ -189,11 +189,11 @@ static const int BORChatRoomDefaultSpacing = 10;
     _messageSendButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     _messageSendButton.translatesAutoresizingMaskIntoConstraints = NO;
     [_messageSendButton setTitle:@"Chat" forState:UIControlStateNormal];
-    _messageSendButton.tintColor = UIColorFromRGB(0x8e8e93);
+    _messageSendButton.tintColor = [UIColor whiteColor];
     _messageSendButton.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:_messageSendButton.titleLabel.font.pointSize];
     [_messageSendButton addConstraint:[NSLayoutConstraint constraintWithItem:_messageSendButton
-        attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil
-        attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:36.0]];
+                                                                   attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil
+                                                                   attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:36.0]];
     [_messageSendButton addTarget:self action:@selector(sendMessage) forControlEvents:UIControlEventTouchUpInside];
     return _messageSendButton;
 }
@@ -201,8 +201,8 @@ static const int BORChatRoomDefaultSpacing = 10;
 #pragma mark - Private
 
 - (void)sendMessage {
-        self.messageTextView.text = nil;
-        [self.messageTextView resignFirstResponder];
+    self.messageTextView.text = nil;
+    [self.messageTextView resignFirstResponder];
 }
 
 #pragma mark - Protocols
@@ -218,7 +218,7 @@ static const int BORChatRoomDefaultSpacing = 10;
         self.messagePlaceholder.hidden = YES;
     else
         self.messagePlaceholder.hidden = NO;
-
+    
 }
 
 - (void)updateMessageTextViewSizeAndInset:(UITextView *)textView {
@@ -241,13 +241,13 @@ static const int BORChatRoomDefaultSpacing = 10;
     self.keyboardSize = [[userInfo objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
     [self updateMessageTextViewSizeAndInset:self.messageTextView];
     [self.view layoutIfNeeded];
-
+    
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:[userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue]];
     [UIView setAnimationCurve:[userInfo[UIKeyboardAnimationCurveUserInfoKey] integerValue]];
-        self.lastKeyboardHeight = self.keyboardSize.height;
-        self.bottomSpacingConstraint.constant = self.lastKeyboardHeight;
-        [self.view layoutIfNeeded];
+    self.lastKeyboardHeight = self.keyboardSize.height;
+    self.bottomSpacingConstraint.constant = self.lastKeyboardHeight;
+    [self.view layoutIfNeeded];
     [UIView commitAnimations];
 }
 
@@ -259,8 +259,8 @@ static const int BORChatRoomDefaultSpacing = 10;
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:[userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue]];
     [UIView setAnimationCurve:6];
-        self.bottomSpacingConstraint.constant = 0;
-        [self.view layoutIfNeeded];
+    self.bottomSpacingConstraint.constant = 0;
+    [self.view layoutIfNeeded];
     [UIView commitAnimations];
 }
 

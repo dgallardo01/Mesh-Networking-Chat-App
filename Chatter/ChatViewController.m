@@ -37,14 +37,11 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"Encounter";
-    FAKFontAwesome *usersIcon = [FAKFontAwesome usersIconWithSize:20.0f];
-    [usersIcon addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor]];
 
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageWithStackedIcons:@[usersIcon] imageSize:CGSizeMake(30, 30)] style:UIBarButtonItemStylePlain target:self action:@selector(browserSetup)];
-    [self.navigationItem.leftBarButtonItem setTintColor:[UIColor blackColor]];
+    [self createUsersBrosweButton];
 
-    
+    [self.navigationController setNavigationBarHidden:YES];
+ 
     //Initiate a multipeer manager
     self.multipeerManager = [[MultiPeerManager alloc]init];
     
@@ -181,10 +178,34 @@
     });
 }
 
+-(void)createUsersBrosweButton
+{
+    //Created circle bounding box
+    UIImageView *squareView = [[UIImageView alloc]initWithFrame:CGRectMake(30, 29, 40, 40)];
+    
+    squareView.image = [UIImage imageNamed:@"chatterUsersButton.png"];
+    [squareView setAlpha:.2];
+    squareView.layer.cornerRadius = 20;
+    squareView.layer.masksToBounds = YES;
+    [self.view addSubview:squareView];
+    
+    //Creates users icon
+    FAKFontAwesome *usersIcon = [FAKFontAwesome usersIconWithSize:20.0f];
+    [usersIcon addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor]];
+    
+    //Creates actual button
+    UIButton *usersBrowserButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    usersBrowserButton.frame = CGRectMake(0, 0, 100, 100);
+    [usersBrowserButton setBackgroundImage:[UIImage imageWithStackedIcons:@[usersIcon]imageSize:CGSizeMake(100, 100)] forState:UIControlStateNormal];
+    [usersBrowserButton addTarget:self action:@selector(browserSetup) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:usersBrowserButton];
+}
+
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
     return UIStatusBarStyleLightContent;
 }
+
 
 @end
 

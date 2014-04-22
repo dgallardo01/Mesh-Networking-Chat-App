@@ -75,15 +75,15 @@ static NSCache *imageCache;
 
 }
 
-//- (void)setSelected:(BOOL)selected {
-//    [super setSelected:selected];
-//    [UIView animateWithDuration:0.33 animations:^{
-//        if (selected)
-//            self.messageTextView.backgroundColor = [UIColor colorWithRed:0.1 green:0.5 blue:0.9 alpha:1.0];
-//        else
-//            self.messageTextView.backgroundColor = initialColor;
-//    }];
-//}
+- (void)setSelected:(BOOL)selected {
+    [super setSelected:selected];
+    [UIView animateWithDuration:0.33 animations:^{
+        if (selected)
+            self.messageTextView.backgroundColor = [UIColor colorWithRed:0.1 green:0.5 blue:0.9 alpha:1.0];
+        else
+            self.messageTextView.backgroundColor = initialColor;
+    }];
+}
 
 - (UIImageView *)bubbleImageView {
     if (_bubbleImageView)

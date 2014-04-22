@@ -33,6 +33,7 @@
 		30AC52F618FC9D0000014DEB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 30AC52F418FC9D0000014DEB /* InfoPlist.strings */; };
 		30AC52F818FC9D0000014DEB /* ChatterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AC52F718FC9D0000014DEB /* ChatterTests.m */; };
 		30AC530218FC9D1500014DEB /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30AC530118FC9D1500014DEB /* main.storyboard */; };
+		30D76B921906FF8400F0FEA5 /* chatterUsersButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 30D76B911906FF8400F0FEA5 /* chatterUsersButton.png */; };
 		CC532C8383114FAC9490F724 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6241349417243F8BB8AD8C8 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,7 @@
 		30AC52F518FC9D0000014DEB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		30AC52F718FC9D0000014DEB /* ChatterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatterTests.m; sourceTree = "<group>"; };
 		30AC530118FC9D1500014DEB /* main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
+		30D76B911906FF8400F0FEA5 /* chatterUsersButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chatterUsersButton.png; sourceTree = "<group>"; };
 		9D9D91D12FE342D88A602A69 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		E6241349417243F8BB8AD8C8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -169,6 +171,7 @@
 				307D9C78190626FB00421588 /* ChatterBG.png */,
 				307D9C7A1906278100421588 /* ChatterBG2.png */,
 				307D9C7E1906AC7600421588 /* chatterBrowseIcon.png */,
+				30D76B911906FF8400F0FEA5 /* chatterUsersButton.png */,
 				30AC52D518FC9D0000014DEB /* Supporting Files */,
 			);
 			path = Chatter;
@@ -282,6 +285,7 @@
 			files = (
 				307D9C79190626FB00421588 /* ChatterBG.png in Resources */,
 				30AC52D918FC9D0000014DEB /* InfoPlist.strings in Resources */,
+				30D76B921906FF8400F0FEA5 /* chatterUsersButton.png in Resources */,
 				307D9C7F1906AC7600421588 /* chatterBrowseIcon.png in Resources */,
 				30AC530218FC9D1500014DEB /* main.storyboard in Resources */,
 				300567A318FF378D0016B55D /* settings-25.png in Resources */,
