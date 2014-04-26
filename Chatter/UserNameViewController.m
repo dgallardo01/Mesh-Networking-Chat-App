@@ -42,6 +42,7 @@
     self.userNameTextField.textColor = [UIColor whiteColor];
     [self.userNameTextField becomeFirstResponder];
     self.usernameBackground.image = [UIImage imageNamed:@"ChatterBG.png"];
+    
 }
 
 - (void)didReceiveMemoryWarning

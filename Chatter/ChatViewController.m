@@ -48,11 +48,7 @@
     //Call datastore
     self.dataStore = [EncounterDataStore sharedInstance];
     NSLog(@"%@",[self.dataStore getUserNameAtIndex:0]);
-    NSLog(@"%d",[self.dataStore count]);
-    
-    //Create Gear Icon
-    //    [self createGearButton];
-    
+    NSLog(@"%ld",(long)[self.dataStore count]);
     
     //Advertiser
     [self.multipeerManager setupPeerAndSessionWithDisplayName:[self.dataStore getUserNameAtIndex:0]];
@@ -103,6 +99,7 @@
     message.text = self.messageTextView.text;
     message.sentByCurrentUser = YES;
     message.date = [NSDate date];
+    message.senderName = [self.dataStore getUserNameAtIndex:0];
     
     [self addMessage:message scrollToMessage:YES];
     
@@ -171,6 +168,7 @@
     message.text = receivedText;
     message.senderName = peerDisplayName;
     message.date = [NSDate date];
+    
     
     dispatch_async(dispatch_get_main_queue(), ^{
         [self addMessage:message scrollToMessage:YES];
