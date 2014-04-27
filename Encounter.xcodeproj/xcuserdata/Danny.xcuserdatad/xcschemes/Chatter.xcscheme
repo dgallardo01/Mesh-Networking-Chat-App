@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "30AC52C818FC9D0000014DEB"
                BuildableName = "Chatter.app"
-               BlueprintName = "Chatter"
-               ReferencedContainer = "container:Chatter.xcodeproj">
+               BlueprintName = "Encounter"
+               ReferencedContainer = "container:Encounter.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "30AC52E818FC9D0000014DEB"
                BuildableName = "ChatterTests.xctest"
-               BlueprintName = "ChatterTests"
-               ReferencedContainer = "container:Chatter.xcodeproj">
+               BlueprintName = "EncounterTests"
+               ReferencedContainer = "container:Encounter.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,8 +44,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "30AC52C818FC9D0000014DEB"
             BuildableName = "Chatter.app"
-            BlueprintName = "Chatter"
-            ReferencedContainer = "container:Chatter.xcodeproj">
+            BlueprintName = "Encounter"
+            ReferencedContainer = "container:Encounter.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "30AC52C818FC9D0000014DEB"
             BuildableName = "Chatter.app"
-            BlueprintName = "Chatter"
-            ReferencedContainer = "container:Chatter.xcodeproj">
+            BlueprintName = "Encounter"
+            ReferencedContainer = "container:Encounter.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -81,8 +81,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "30AC52C818FC9D0000014DEB"
             BuildableName = "Chatter.app"
-            BlueprintName = "Chatter"
-            ReferencedContainer = "container:Chatter.xcodeproj">
+            BlueprintName = "Encounter"
+            ReferencedContainer = "container:Encounter.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

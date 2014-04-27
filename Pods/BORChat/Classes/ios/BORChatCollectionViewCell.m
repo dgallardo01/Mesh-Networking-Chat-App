@@ -345,7 +345,7 @@ static NSCache *imageCache;
 
 - (void)configureDetailsLabel {
     self.timeLabel.text = self.timeString;
-    self.usernameLabel.text = [NSString stringWithFormat:@"%@ says:", self.senderName];
+    self.usernameLabel.text = [NSString stringWithFormat:@"%@", self.senderName];
 }
 
 + (CGSize)textViewSizeForText:(NSString *)text maxWidth:(float)maxWidth {
@@ -371,7 +371,6 @@ static NSCache *imageCache;
 
 
 //    height += 16; //top spacing
-
     return CGSizeMake(320, height);
 }
 
