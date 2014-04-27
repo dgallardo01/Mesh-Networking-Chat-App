@@ -14,7 +14,8 @@
 		3005679F18FF188E0016B55D /* EncounterDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3005679E18FF188E0016B55D /* EncounterDataStore.m */; };
 		300567A318FF378D0016B55D /* settings-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 300567A218FF378D0016B55D /* settings-25.png */; };
 		301C85511900E75E00DACDC1 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 301C85501900E75E00DACDC1 /* SettingsViewController.m */; };
-		307D9C79190626FB00421588 /* ChatterBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 307D9C78190626FB00421588 /* ChatterBG.png */; };
+		303D68CA190DA277007E538A /* ChatterBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 303D68C9190DA277007E538A /* ChatterBG.png */; };
+		3066A77D190D8D65004FEA4A /* Meshwork_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3066A77C190D8D65004FEA4A /* Meshwork_Icon.png */; };
 		307D9C7B1906278100421588 /* ChatterBG2.png in Resources */ = {isa = PBXBuildFile; fileRef = 307D9C7A1906278100421588 /* ChatterBG2.png */; };
 		307D9C7F1906AC7600421588 /* chatterBrowseIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 307D9C7E1906AC7600421588 /* chatterBrowseIcon.png */; };
 		30AC52CD18FC9D0000014DEB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30AC52CC18FC9D0000014DEB /* Foundation.framework */; };
@@ -60,23 +61,24 @@
 		300567A218FF378D0016B55D /* settings-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings-25.png"; sourceTree = "<group>"; };
 		301C854F1900E75E00DACDC1 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		301C85501900E75E00DACDC1 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
-		307D9C78190626FB00421588 /* ChatterBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ChatterBG.png; sourceTree = "<group>"; };
+		303D68C9190DA277007E538A /* ChatterBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ChatterBG.png; sourceTree = "<group>"; };
+		3066A77C190D8D65004FEA4A /* Meshwork_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Meshwork_Icon.png; sourceTree = "<group>"; };
 		307D9C7A1906278100421588 /* ChatterBG2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ChatterBG2.png; sourceTree = "<group>"; };
 		307D9C7E1906AC7600421588 /* chatterBrowseIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chatterBrowseIcon.png; sourceTree = "<group>"; };
-		30AC52C918FC9D0000014DEB /* Encounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Encounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		30AC52C918FC9D0000014DEB /* Meshwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meshwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30AC52CC18FC9D0000014DEB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		30AC52CE18FC9D0000014DEB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		30AC52D018FC9D0000014DEB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		30AC52D218FC9D0000014DEB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		30AC52D618FC9D0000014DEB /* Encounter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Encounter-Info.plist"; sourceTree = "<group>"; };
+		30AC52D618FC9D0000014DEB /* Meshwork-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Meshwork-Info.plist"; sourceTree = "<group>"; };
 		30AC52D818FC9D0000014DEB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		30AC52DA18FC9D0000014DEB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		30AC52DC18FC9D0000014DEB /* Encounter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Encounter-Prefix.pch"; sourceTree = "<group>"; };
+		30AC52DC18FC9D0000014DEB /* Meshwork-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Meshwork-Prefix.pch"; sourceTree = "<group>"; };
 		30AC52DD18FC9D0000014DEB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		30AC52DE18FC9D0000014DEB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		30AC52E118FC9D0000014DEB /* Chatter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Chatter.xcdatamodel; sourceTree = "<group>"; };
 		30AC52E318FC9D0000014DEB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		30AC52E918FC9D0000014DEB /* EncounterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EncounterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		30AC52E918FC9D0000014DEB /* MeshworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeshworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		30AC52EA18FC9D0000014DEB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		30AC52F318FC9D0000014DEB /* EncounterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EncounterTests-Info.plist"; sourceTree = "<group>"; };
 		30AC52F518FC9D0000014DEB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -129,8 +131,8 @@
 		30AC52CA18FC9D0000014DEB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				30AC52C918FC9D0000014DEB /* Encounter.app */,
-				30AC52E918FC9D0000014DEB /* EncounterTests.xctest */,
+				30AC52C918FC9D0000014DEB /* Meshwork.app */,
+				30AC52E918FC9D0000014DEB /* MeshworkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -168,10 +170,11 @@
 				30AC52E318FC9D0000014DEB /* Images.xcassets */,
 				30AC52E018FC9D0000014DEB /* Chatter.xcdatamodeld */,
 				300567A218FF378D0016B55D /* settings-25.png */,
-				307D9C78190626FB00421588 /* ChatterBG.png */,
 				307D9C7A1906278100421588 /* ChatterBG2.png */,
 				307D9C7E1906AC7600421588 /* chatterBrowseIcon.png */,
 				30D76B911906FF8400F0FEA5 /* chatterUsersButton.png */,
+				3066A77C190D8D65004FEA4A /* Meshwork_Icon.png */,
+				303D68C9190DA277007E538A /* ChatterBG.png */,
 				30AC52D518FC9D0000014DEB /* Supporting Files */,
 			);
 			path = Chatter;
@@ -180,10 +183,10 @@
 		30AC52D518FC9D0000014DEB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				30AC52D618FC9D0000014DEB /* Encounter-Info.plist */,
+				30AC52D618FC9D0000014DEB /* Meshwork-Info.plist */,
 				30AC52D718FC9D0000014DEB /* InfoPlist.strings */,
 				30AC52DA18FC9D0000014DEB /* main.m */,
-				30AC52DC18FC9D0000014DEB /* Encounter-Prefix.pch */,
+				30AC52DC18FC9D0000014DEB /* Meshwork-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -209,9 +212,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		30AC52C818FC9D0000014DEB /* Encounter */ = {
+		30AC52C818FC9D0000014DEB /* Meshwork */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 30AC52FB18FC9D0000014DEB /* Build configuration list for PBXNativeTarget "Encounter" */;
+			buildConfigurationList = 30AC52FB18FC9D0000014DEB /* Build configuration list for PBXNativeTarget "Meshwork" */;
 			buildPhases = (
 				FD93C2A86E5844FABE48300A /* Check Pods Manifest.lock */,
 				30AC52C518FC9D0000014DEB /* Sources */,
@@ -223,14 +226,14 @@
 			);
 			dependencies = (
 			);
-			name = Encounter;
+			name = Meshwork;
 			productName = Chatter;
-			productReference = 30AC52C918FC9D0000014DEB /* Encounter.app */;
+			productReference = 30AC52C918FC9D0000014DEB /* Meshwork.app */;
 			productType = "com.apple.product-type.application";
 		};
-		30AC52E818FC9D0000014DEB /* EncounterTests */ = {
+		30AC52E818FC9D0000014DEB /* MeshworkTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 30AC52FE18FC9D0000014DEB /* Build configuration list for PBXNativeTarget "EncounterTests" */;
+			buildConfigurationList = 30AC52FE18FC9D0000014DEB /* Build configuration list for PBXNativeTarget "MeshworkTests" */;
 			buildPhases = (
 				30AC52E518FC9D0000014DEB /* Sources */,
 				30AC52E618FC9D0000014DEB /* Frameworks */,
@@ -241,9 +244,9 @@
 			dependencies = (
 				30AC52F018FC9D0000014DEB /* PBXTargetDependency */,
 			);
-			name = EncounterTests;
+			name = MeshworkTests;
 			productName = ChatterTests;
-			productReference = 30AC52E918FC9D0000014DEB /* EncounterTests.xctest */;
+			productReference = 30AC52E918FC9D0000014DEB /* MeshworkTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -260,7 +263,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 30AC52C418FC9D0000014DEB /* Build configuration list for PBXProject "Encounter" */;
+			buildConfigurationList = 30AC52C418FC9D0000014DEB /* Build configuration list for PBXProject "Meshwork" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -272,8 +275,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				30AC52C818FC9D0000014DEB /* Encounter */,
-				30AC52E818FC9D0000014DEB /* EncounterTests */,
+				30AC52C818FC9D0000014DEB /* Meshwork */,
+				30AC52E818FC9D0000014DEB /* MeshworkTests */,
 			);
 		};
 /* End PBXProject section */
@@ -283,14 +286,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				307D9C79190626FB00421588 /* ChatterBG.png in Resources */,
 				30AC52D918FC9D0000014DEB /* InfoPlist.strings in Resources */,
 				30D76B921906FF8400F0FEA5 /* chatterUsersButton.png in Resources */,
 				307D9C7F1906AC7600421588 /* chatterBrowseIcon.png in Resources */,
 				30AC530218FC9D1500014DEB /* main.storyboard in Resources */,
 				300567A318FF378D0016B55D /* settings-25.png in Resources */,
+				303D68CA190DA277007E538A /* ChatterBG.png in Resources */,
 				30AC52E418FC9D0000014DEB /* Images.xcassets in Resources */,
 				307D9C7B1906278100421588 /* ChatterBG2.png in Resources */,
+				3066A77D190D8D65004FEA4A /* Meshwork_Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +370,7 @@
 /* Begin PBXTargetDependency section */
 		30AC52F018FC9D0000014DEB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 30AC52C818FC9D0000014DEB /* Encounter */;
+			target = 30AC52C818FC9D0000014DEB /* Meshwork */;
 			targetProxy = 30AC52EF18FC9D0000014DEB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -468,9 +472,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Chatter/Encounter-Prefix.pch";
-				INFOPLIST_FILE = "Chatter/Encounter-Info.plist";
-				PRODUCT_NAME = Encounter;
+				GCC_PREFIX_HEADER = "Chatter/Meshwork-Prefix.pch";
+				INFOPLIST_FILE = "Chatter/Meshwork-Info.plist";
+				PRODUCT_NAME = Meshwork;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -482,9 +486,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Chatter/Encounter-Prefix.pch";
-				INFOPLIST_FILE = "Chatter/Encounter-Info.plist";
-				PRODUCT_NAME = Encounter;
+				GCC_PREFIX_HEADER = "Chatter/Meshwork-Prefix.pch";
+				INFOPLIST_FILE = "Chatter/Meshwork-Info.plist";
+				PRODUCT_NAME = Meshwork;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -499,13 +503,13 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Chatter/Chatter-Prefix.pch";
+				GCC_PREFIX_HEADER = "Chatter/Meshwork-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "ChatterTests/EncounterTests-Info.plist";
-				PRODUCT_NAME = EncounterTests;
+				PRODUCT_NAME = MeshworkTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -521,9 +525,9 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Chatter/Chatter-Prefix.pch";
+				GCC_PREFIX_HEADER = "Chatter/Meshwork-Prefix.pch";
 				INFOPLIST_FILE = "ChatterTests/EncounterTests-Info.plist";
-				PRODUCT_NAME = EncounterTests;
+				PRODUCT_NAME = MeshworkTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -532,7 +536,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		30AC52C418FC9D0000014DEB /* Build configuration list for PBXProject "Encounter" */ = {
+		30AC52C418FC9D0000014DEB /* Build configuration list for PBXProject "Meshwork" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				30AC52F918FC9D0000014DEB /* Debug */,
@@ -541,7 +545,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		30AC52FB18FC9D0000014DEB /* Build configuration list for PBXNativeTarget "Encounter" */ = {
+		30AC52FB18FC9D0000014DEB /* Build configuration list for PBXNativeTarget "Meshwork" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				30AC52FC18FC9D0000014DEB /* Debug */,
@@ -550,7 +554,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		30AC52FE18FC9D0000014DEB /* Build configuration list for PBXNativeTarget "EncounterTests" */ = {
+		30AC52FE18FC9D0000014DEB /* Build configuration list for PBXNativeTarget "MeshworkTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				30AC52FF18FC9D0000014DEB /* Debug */,

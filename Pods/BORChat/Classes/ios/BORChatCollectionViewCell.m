@@ -171,7 +171,7 @@ static NSCache *imageCache;
     _timeLabel.translatesAutoresizingMaskIntoConstraints = NO;
     _timeLabel.textAlignment = NSTextAlignmentCenter;
     _timeLabel.font = [UIFont systemFontOfSize:11];
-    _timeLabel.textColor = [UIColor lightGrayColor];
+    _timeLabel.textColor = [UIColor whiteColor];
     return _timeLabel;
 }
 
