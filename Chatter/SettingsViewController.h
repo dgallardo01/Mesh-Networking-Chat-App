@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "MultiPeerManager.h"
 
-@interface SettingsViewController : UIViewController <UITextFieldDelegate, MCBrowserViewControllerDelegate>
+@interface SettingsViewController : UIViewController <UITextFieldDelegate>
 
 @end
