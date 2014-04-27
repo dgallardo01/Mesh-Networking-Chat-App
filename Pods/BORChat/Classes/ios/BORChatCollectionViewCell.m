@@ -13,12 +13,15 @@
 @property (strong, nonatomic) UIImageView *bubbleImageView;
 @property (strong, nonatomic) UITextView *messageTextView;
 @property (strong, nonatomic) UILabel *timeLabel;
+@property (strong, nonatomic) UILabel *usernameLabel;
 @property (strong, nonatomic) NSLayoutConstraint *textViewWidthConstraint;
 @property (strong, nonatomic) NSLayoutConstraint *textViewHeightConstraint;
 @property (strong, nonatomic) NSLayoutConstraint *leftAlignmentConstraint;
 @property (strong, nonatomic) NSLayoutConstraint *rightAlignmentConstraint;
 @property (nonatomic, strong) id leftTimeLabelAlignmentConstraint;
 @property (nonatomic, strong) id rightTimeLabelAlignmentConstraint;
+@property (strong, nonatomic) NSLayoutConstraint *leftUsernameLabelConstraint;
+@property (strong, nonatomic) NSLayoutConstraint *rightUsernameLabelConstraint;
 @end
 
 static UIColor *initialColor;
@@ -38,34 +41,77 @@ static NSCache *imageCache;
         [self.contentView addSubview:self.bubbleImageView];
         [self.contentView addSubview:self.messageTextView];
         [self.contentView addSubview:self.timeLabel];
+        [self.contentView addSubview:self.usernameLabel];
         self.leftAlignmentConstraint = [NSLayoutConstraint constraintsWithVisualFormat:@"|-5-[bubbleImageView]"
-            options:NSLayoutFormatAlignmentMask metrics:nil
-            views:@{@"bubbleImageView" : self.bubbleImageView}].lastObject;
+                                                                               options:NSLayoutFormatAlignmentMask
+                                                                               metrics:nil
+                                                                                 views:@{@"bubbleImageView" : self.bubbleImageView}].lastObject;
         self.rightAlignmentConstraint = [NSLayoutConstraint constraintsWithVisualFormat:@"[bubbleImageView]-5-|"
-            options:NSLayoutFormatAlignmentMask metrics:nil
-            views:@{@"bubbleImageView" : self.bubbleImageView}].lastObject;
+                                                                                options:NSLayoutFormatAlignmentMask
+                                                                                metrics:nil
+                                                                                  views:@{@"bubbleImageView" : self.bubbleImageView}].lastObject;
         self.leftTimeLabelAlignmentConstraint = [NSLayoutConstraint constraintsWithVisualFormat:@"[timeLabel]-5-|"
-            options:NSLayoutFormatAlignmentMask metrics:nil
-            views:@{@"timeLabel" : self.timeLabel}].lastObject;
+                                                                                        options:NSLayoutFormatAlignmentMask
+                                                                                        metrics:nil
+                                                                                          views:@{@"timeLabel" : self.timeLabel}].lastObject;
         self.rightTimeLabelAlignmentConstraint = [NSLayoutConstraint constraintsWithVisualFormat:@"|-5-[timeLabel]"
-            options:NSLayoutFormatAlignmentMask metrics:nil
-            views:@{@"timeLabel" : self.timeLabel}].lastObject;
+                                                                                         options:NSLayoutFormatAlignmentMask
+                                                                                         metrics:nil
+                                                                                           views:@{@"timeLabel" : self.timeLabel}].lastObject;
+        
+        self.leftUsernameLabelConstraint = [NSLayoutConstraint constraintsWithVisualFormat:@"[usernameLabel]-5-|"
+                                                                                   options:NSLayoutFormatAlignmentMask
+                                                                                   metrics:nil
+                                                                                     views:@{@"usernameLabel" : self.usernameLabel}].lastObject;
+        
+        self.rightUsernameLabelConstraint = [NSLayoutConstraint constraintsWithVisualFormat:@"|-5-[usernameLabel]"
+                                                                                   options:NSLayoutFormatAlignmentMask
+                                                                                   metrics:nil
+                                                                                      views:@{@"usernameLabel" : self.usernameLabel}].lastObject;
+        
         [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[bubbleImageView]|"
-            options:NSLayoutFormatAlignmentMask metrics:nil views:@{@"bubbleImageView" : self.bubbleImageView}]];
+                                                                                 options:NSLayoutFormatAlignmentMask
+                                                                                 metrics:nil
+                                                                                   views:@{@"bubbleImageView" : self.bubbleImageView}]];
+        
         [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[timeLabel]|"
-            options:NSLayoutFormatAlignmentMask metrics:nil views:@{@"timeLabel" : self.timeLabel}]];
+                                                                                 options:NSLayoutFormatAlignmentMask
+                                                                                 metrics:nil
+                                                                                   views:@{@"timeLabel" : self.timeLabel}]];
+        
+        [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[usernameLabel]|"
+                                                                                 options:NSLayoutFormatAlignmentMask
+                                                                                 metrics:nil
+                                                                                   views:@{@"usernameLabel" : self.usernameLabel}]];
+        
         [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:self.bubbleImageView
-            attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.messageTextView
-            attribute:NSLayoutAttributeLeft multiplier:1.0 constant:-10.0]];
+                                                                     attribute:NSLayoutAttributeLeft
+                                                                     relatedBy:NSLayoutRelationEqual
+                                                                        toItem:self.messageTextView
+                                                                     attribute:NSLayoutAttributeLeft
+                                                                    multiplier:1.0
+                                                                      constant:-10.0]];
         [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:self.bubbleImageView
-            attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.messageTextView
-            attribute:NSLayoutAttributeRight multiplier:1.0 constant:10.0]];
+                                                                     attribute:NSLayoutAttributeRight
+                                                                     relatedBy:NSLayoutRelationEqual
+                                                                        toItem:self.messageTextView
+                                                                     attribute:NSLayoutAttributeRight
+                                                                    multiplier:1.0
+                                                                      constant:10.0]];
         [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:self.bubbleImageView
-            attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.messageTextView
-            attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0.0]];
+                                                                     attribute:NSLayoutAttributeCenterY
+                                                                     relatedBy:NSLayoutRelationEqual
+                                                                        toItem:self.messageTextView
+                                                                     attribute:NSLayoutAttributeCenterY
+                                                                    multiplier:1.0
+                                                                      constant:0.0]];
         [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:self.bubbleImageView
-            attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.messageTextView
-            attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0]];
+                                                                     attribute:NSLayoutAttributeCenterX
+                                                                     relatedBy:NSLayoutRelationEqual
+                                                                        toItem:self.messageTextView
+                                                                     attribute:NSLayoutAttributeCenterX
+                                                                    multiplier:1.0
+                                                                      constant:0.0]];
     }
     return self;
 }
@@ -75,15 +121,17 @@ static NSCache *imageCache;
 
 }
 
-//- (void)setSelected:(BOOL)selected {
-//    [super setSelected:selected];
-//    [UIView animateWithDuration:0.33 animations:^{
-//        if (selected)
+- (void)setSelected:(BOOL)selected {
+    [super setSelected:selected];
+    [UIView animateWithDuration:0.33 animations:^{
+        if (selected)
 //            self.messageTextView.backgroundColor = [UIColor colorWithRed:0.1 green:0.5 blue:0.9 alpha:1.0];
-//        else
-//            self.messageTextView.backgroundColor = initialColor;
-//    }];
-//}
+              self.messageTextView.backgroundColor = [UIColor whiteColor];
+
+        else
+            self.messageTextView.backgroundColor = initialColor;
+    }];
+}
 
 - (UIImageView *)bubbleImageView {
     if (_bubbleImageView)
@@ -96,7 +144,10 @@ static NSCache *imageCache;
 
 - (UITextView *)messageTextView {
     if (_messageTextView)
+    {
         return _messageTextView;
+    }
+    else{
     _messageTextView = [[UITextView alloc] init];
     _messageTextView.translatesAutoresizingMaskIntoConstraints = NO;
     _messageTextView.editable = NO;
@@ -109,6 +160,7 @@ static NSCache *imageCache;
         attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil
         attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:0];
     [_messageTextView addConstraints:@[self.textViewWidthConstraint, self.textViewHeightConstraint]];
+    }
     return _messageTextView;
 }
 
@@ -119,8 +171,21 @@ static NSCache *imageCache;
     _timeLabel.translatesAutoresizingMaskIntoConstraints = NO;
     _timeLabel.textAlignment = NSTextAlignmentCenter;
     _timeLabel.font = [UIFont systemFontOfSize:11];
-    _timeLabel.textColor = [UIColor lightGrayColor];
+    _timeLabel.textColor = [UIColor whiteColor];
     return _timeLabel;
+}
+
+-(UILabel *)usernameLabel{
+    if(_usernameLabel){
+        return _usernameLabel;
+    }
+    else{
+        _usernameLabel = [UILabel new];
+        _usernameLabel.translatesAutoresizingMaskIntoConstraints = NO;
+        _usernameLabel.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:11];
+        _usernameLabel.textColor = [UIColor whiteColor];
+    }
+    return _usernameLabel;
 }
 
 - (void)setMessage:(id <BORChatMessage>)message {
@@ -203,8 +268,11 @@ static NSCache *imageCache;
         [self.contentView addConstraint:self.rightAlignmentConstraint];
         if ([self.contentView.constraints containsObject:self.leftTimeLabelAlignmentConstraint]) {
             [self.contentView removeConstraint:self.leftTimeLabelAlignmentConstraint];
+            [self.contentView removeConstraint:self.leftUsernameLabelConstraint];
+
         }
         [self.contentView addConstraint:self.rightTimeLabelAlignmentConstraint];
+        [self.contentView addConstraint:self.rightUsernameLabelConstraint];
     }
     else {
         self.messageTextView.textColor = [UIColor lightTextColor];
@@ -217,12 +285,16 @@ static NSCache *imageCache;
         self.bubbleImageView.image = [image stretchableImageWithLeftCapWidth:25 topCapHeight:18];
         if ([self.contentView.constraints containsObject:self.rightAlignmentConstraint]) {
             [self.contentView removeConstraint:self.rightAlignmentConstraint];
+            [self.contentView removeConstraint:self.rightUsernameLabelConstraint];
+
         }
         [self.contentView addConstraint:self.leftAlignmentConstraint];
         if ([self.contentView.constraints containsObject:self.rightTimeLabelAlignmentConstraint]) {
             [self.contentView removeConstraint:self.rightTimeLabelAlignmentConstraint];
+            [self.contentView removeConstraint:self.rightUsernameLabelConstraint];
         }
         [self.contentView addConstraint:self.leftTimeLabelAlignmentConstraint];
+        [self.contentView addConstraint:self.leftUsernameLabelConstraint];
     }
 }
 
@@ -273,6 +345,7 @@ static NSCache *imageCache;
 
 - (void)configureDetailsLabel {
     self.timeLabel.text = self.timeString;
+    self.usernameLabel.text = [NSString stringWithFormat:@"%@", self.senderName];
 }
 
 + (CGSize)textViewSizeForText:(NSString *)text maxWidth:(float)maxWidth {
@@ -298,7 +371,6 @@ static NSCache *imageCache;
 
 
 //    height += 16; //top spacing
-
     return CGSizeMake(320, height);
 }
 

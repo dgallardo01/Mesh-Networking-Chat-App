@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "30AC52C818FC9D0000014DEB"
-               BuildableName = "Chatter.app"
-               BlueprintName = "Chatter"
-               ReferencedContainer = "container:Chatter.xcodeproj">
+               BuildableName = "Meshwork.app"
+               BlueprintName = "Meshwork"
+               ReferencedContainer = "container:Meshwork.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "30AC52E818FC9D0000014DEB"
-               BuildableName = "ChatterTests.xctest"
-               BlueprintName = "ChatterTests"
-               ReferencedContainer = "container:Chatter.xcodeproj">
+               BuildableName = "MeshworkTests.xctest"
+               BlueprintName = "MeshworkTests"
+               ReferencedContainer = "container:Meshwork.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "30AC52C818FC9D0000014DEB"
-            BuildableName = "Chatter.app"
-            BlueprintName = "Chatter"
-            ReferencedContainer = "container:Chatter.xcodeproj">
+            BuildableName = "Meshwork.app"
+            BlueprintName = "Meshwork"
+            ReferencedContainer = "container:Meshwork.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "30AC52C818FC9D0000014DEB"
-            BuildableName = "Chatter.app"
-            BlueprintName = "Chatter"
-            ReferencedContainer = "container:Chatter.xcodeproj">
+            BuildableName = "Meshwork.app"
+            BlueprintName = "Meshwork"
+            ReferencedContainer = "container:Meshwork.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "30AC52C818FC9D0000014DEB"
-            BuildableName = "Chatter.app"
-            BlueprintName = "Chatter"
-            ReferencedContainer = "container:Chatter.xcodeproj">
+            BuildableName = "Meshwork.app"
+            BlueprintName = "Meshwork"
+            ReferencedContainer = "container:Meshwork.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

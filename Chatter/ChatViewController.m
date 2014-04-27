@@ -37,25 +37,18 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"Encounter";
-    FAKFontAwesome *usersIcon = [FAKFontAwesome usersIconWithSize:20.0f];
-    [usersIcon addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor]];
 
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageWithStackedIcons:@[usersIcon] imageSize:CGSizeMake(30, 30)] style:UIBarButtonItemStylePlain target:self action:@selector(browserSetup)];
-    [self.navigationItem.leftBarButtonItem setTintColor:[UIColor blackColor]];
+    [self createUsersBrosweButton];
 
-    
+    [self.navigationController setNavigationBarHidden:YES];
+ 
     //Initiate a multipeer manager
     self.multipeerManager = [[MultiPeerManager alloc]init];
     
     //Call datastore
     self.dataStore = [EncounterDataStore sharedInstance];
     NSLog(@"%@",[self.dataStore getUserNameAtIndex:0]);
-    NSLog(@"%d",[self.dataStore count]);
-    
-    //Create Gear Icon
-    //    [self createGearButton];
-    
+    NSLog(@"%ld",(long)[self.dataStore count]);
     
     //Advertiser
     [self.multipeerManager setupPeerAndSessionWithDisplayName:[self.dataStore getUserNameAtIndex:0]];
@@ -106,6 +99,7 @@
     message.text = self.messageTextView.text;
     message.sentByCurrentUser = YES;
     message.date = [NSDate date];
+    message.senderName = [self.dataStore getUserNameAtIndex:0];
     
     [self addMessage:message scrollToMessage:YES];
     
@@ -175,16 +169,41 @@
     message.senderName = peerDisplayName;
     message.date = [NSDate date];
     
+    
     dispatch_async(dispatch_get_main_queue(), ^{
         [self addMessage:message scrollToMessage:YES];
         [super sendMessage];
     });
 }
 
+-(void)createUsersBrosweButton
+{
+    //Created circle bounding box
+    UIImageView *squareView = [[UIImageView alloc]initWithFrame:CGRectMake(30, 29, 40, 40)];
+    
+    squareView.image = [UIImage imageNamed:@"chatterUsersButton.png"];
+    [squareView setAlpha:.2];
+    squareView.layer.cornerRadius = 20;
+    squareView.layer.masksToBounds = YES;
+    [self.view addSubview:squareView];
+    
+    //Creates users icon
+    FAKFontAwesome *usersIcon = [FAKFontAwesome usersIconWithSize:20.0f];
+    [usersIcon addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor]];
+    
+    //Creates actual button
+    UIButton *usersBrowserButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    usersBrowserButton.frame = CGRectMake(0, 0, 100, 100);
+    [usersBrowserButton setBackgroundImage:[UIImage imageWithStackedIcons:@[usersIcon]imageSize:CGSizeMake(100, 100)] forState:UIControlStateNormal];
+    [usersBrowserButton addTarget:self action:@selector(browserSetup) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:usersBrowserButton];
+}
+
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
     return UIStatusBarStyleLightContent;
 }
+
 
 @end
 
