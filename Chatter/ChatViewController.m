@@ -10,7 +10,6 @@
 #import "BORChatMessage.h"
 #import "BORChatCollectionViewController.h"
 #import "EncounterDataStore.h"
-#import "SettingsViewController.h"
 #import <FontAwesomeKit.h>
 
 #define SquareViewX 30
@@ -153,19 +152,6 @@
 -(void)browserViewControllerWasCancelled:(MCBrowserViewController *)browserViewController
 {
     [self dismissViewControllerAnimated:YES completion:nil];
-}
-
--(void) createGearButton
-{
-    UIImage *gearIcon = [UIImage imageNamed:@"settings-25"];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:gearIcon style:UIBarButtonItemStylePlain target:self action:@selector(settings)];
-}
--(void)settings
-{
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"main" bundle:nil];
-    SettingsViewController *settingsVC = [storyboard instantiateViewControllerWithIdentifier:@"settingsVC"];
-    [self presentViewController:settingsVC animated:YES completion:nil];
-    
 }
 
 #pragma mark - Notification Center Methods
