@@ -13,7 +13,7 @@
                         <viewControllerLayoutGuide type="bottom" id="cQ2-ii-xQT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="JvT-h6-TKY">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -36,7 +36,7 @@
                         <viewControllerLayoutGuide type="bottom" id="giJ-tO-d8W"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="sx7-ES-kG4">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="USERNAME" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fGT-Qk-WL7">
@@ -83,11 +83,11 @@
                         <viewControllerLayoutGuide type="bottom" id="QKn-Ws-0XZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="k9A-Tn-Njz">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Ao-kL-YQs">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Ao-kL-YQs">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MESHWORK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6c-r4-Wn0">
@@ -105,6 +105,12 @@
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5Ao-kL-YQs" firstAttribute="leading" secondItem="k9A-Tn-Njz" secondAttribute="leading" id="UjX-xE-ZmQ"/>
+                            <constraint firstItem="QKn-Ws-0XZ" firstAttribute="top" secondItem="5Ao-kL-YQs" secondAttribute="bottom" id="ait-hS-baY"/>
+                            <constraint firstAttribute="trailing" secondItem="5Ao-kL-YQs" secondAttribute="trailing" id="h7r-Tf-mOX"/>
+                            <constraint firstItem="5Ao-kL-YQs" firstAttribute="top" secondItem="k9A-Tn-Njz" secondAttribute="top" id="u47-Vh-uxn"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="appNameLabel" destination="g6c-r4-Wn0" id="FHR-x9-bTY"/>
@@ -121,6 +127,6 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
 </document>

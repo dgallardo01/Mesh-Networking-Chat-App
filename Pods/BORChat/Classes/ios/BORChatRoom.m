@@ -184,7 +184,7 @@ static const int BORChatRoomDefaultSpacing = 10;
     {
     _messagePlaceholder = [[UILabel alloc] init];
     _messagePlaceholder.text = @"Text Message";
-    _messagePlaceholder.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:13];
+    _messagePlaceholder.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:15];
     _messagePlaceholder.textColor = [UIColor whiteColor];
     }
     return _messagePlaceholder;

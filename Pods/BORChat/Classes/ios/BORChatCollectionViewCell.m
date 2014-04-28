@@ -126,7 +126,7 @@ static NSCache *imageCache;
     [UIView animateWithDuration:0.33 animations:^{
         if (selected)
 //            self.messageTextView.backgroundColor = [UIColor colorWithRed:0.1 green:0.5 blue:0.9 alpha:1.0];
-              self.messageTextView.backgroundColor = [UIColor whiteColor];
+              self.messageTextView.backgroundColor = [UIColor clearColor];
 
         else
             self.messageTextView.backgroundColor = initialColor;

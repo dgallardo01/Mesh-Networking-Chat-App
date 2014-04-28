@@ -38,9 +38,7 @@
     
     self.chatVC = [[ChatViewController alloc]init];
     self.dataStore = [EncounterDataStore sharedInstance];
-    self.userNameTextField.delegate = self;
-    self.userNameTextField.textColor = [UIColor whiteColor];
-    [self.userNameTextField becomeFirstResponder];
+    [self setupTextField];
     self.usernameBackground.image = [UIImage imageNamed:@"ChatterBG.png"];
     
 }
@@ -75,9 +73,14 @@
     return YES;
 }
 
-- (UIStatusBarStyle)preferredStatusBarStyle
-{
+- (UIStatusBarStyle)preferredStatusBarStyle{
     return UIStatusBarStyleLightContent;
+}
+
+-(void) setupTextField{
+    self.userNameTextField.delegate = self;
+    self.userNameTextField.textColor = [UIColor whiteColor];
+    [self.userNameTextField becomeFirstResponder];
 }
 
 @end

@@ -13,7 +13,6 @@
 		3005679C18FE39730016B55D /* UserNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3005679B18FE39730016B55D /* UserNameViewController.m */; };
 		3005679F18FF188E0016B55D /* EncounterDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3005679E18FF188E0016B55D /* EncounterDataStore.m */; };
 		300567A318FF378D0016B55D /* settings-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 300567A218FF378D0016B55D /* settings-25.png */; };
-		301C85511900E75E00DACDC1 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 301C85501900E75E00DACDC1 /* SettingsViewController.m */; };
 		303D68CA190DA277007E538A /* ChatterBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 303D68C9190DA277007E538A /* ChatterBG.png */; };
 		3066A77D190D8D65004FEA4A /* Meshwork_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3066A77C190D8D65004FEA4A /* Meshwork_Icon.png */; };
 		307D9C7B1906278100421588 /* ChatterBG2.png in Resources */ = {isa = PBXBuildFile; fileRef = 307D9C7A1906278100421588 /* ChatterBG2.png */; };
@@ -59,8 +58,6 @@
 		3005679D18FF188E0016B55D /* EncounterDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncounterDataStore.h; sourceTree = "<group>"; };
 		3005679E18FF188E0016B55D /* EncounterDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncounterDataStore.m; sourceTree = "<group>"; };
 		300567A218FF378D0016B55D /* settings-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings-25.png"; sourceTree = "<group>"; };
-		301C854F1900E75E00DACDC1 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
-		301C85501900E75E00DACDC1 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		303D68C9190DA277007E538A /* ChatterBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ChatterBG.png; sourceTree = "<group>"; };
 		3066A77C190D8D65004FEA4A /* Meshwork_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Meshwork_Icon.png; sourceTree = "<group>"; };
 		307D9C7A1906278100421588 /* ChatterBG2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ChatterBG2.png; sourceTree = "<group>"; };
@@ -157,8 +154,6 @@
 				3005679718FDEB570016B55D /* ChatViewController.h */,
 				3005679818FDEB570016B55D /* ChatViewController.m */,
 				30AC530118FC9D1500014DEB /* main.storyboard */,
-				301C854F1900E75E00DACDC1 /* SettingsViewController.h */,
-				301C85501900E75E00DACDC1 /* SettingsViewController.m */,
 				3005679A18FE39730016B55D /* UserNameViewController.h */,
 				3005679B18FE39730016B55D /* UserNameViewController.m */,
 				3005679218FDE6F20016B55D /* MultiPeerManager.h */,
@@ -349,7 +344,6 @@
 				3005679C18FE39730016B55D /* UserNameViewController.m in Sources */,
 				3005679F18FF188E0016B55D /* EncounterDataStore.m in Sources */,
 				30AC52DF18FC9D0000014DEB /* AppDelegate.m in Sources */,
-				301C85511900E75E00DACDC1 /* SettingsViewController.m in Sources */,
 				30AC52E218FC9D0000014DEB /* Chatter.xcdatamodeld in Sources */,
 				3005679918FDEB570016B55D /* ChatViewController.m in Sources */,
 				30AC52DB18FC9D0000014DEB /* main.m in Sources */,

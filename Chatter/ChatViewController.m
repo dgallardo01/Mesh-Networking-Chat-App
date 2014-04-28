@@ -13,6 +13,24 @@
 #import "SettingsViewController.h"
 #import <FontAwesomeKit.h>
 
+#define SquareViewX 30
+#define SquareViewY 29
+#define SquareViewWidth 40
+#define SquareViewHeight 40
+#define SquareViewAlpha .2
+#define SquareViewCornerRadius 20
+
+#define UserBrowseButtonX 0
+#define UserBrowseButtonY 0
+#define UserBrowseButtonWidth 100
+#define UserBrowseButtonXHeight 100
+
+#define ConnectLabelX 30
+#define ConnectLabelY -11
+#define ConnectLabelWidth 70
+#define ConnectLabelHeight 70
+#define ConnectLabelFontSize 11.0f
+
 @interface ChatViewController ()
 
 @property (strong, nonatomic)MultiPeerManager *multipeerManager;
@@ -178,12 +196,14 @@
 
 -(void)createUsersBrosweButton
 {
+    [self createConnectLabel];
+
     //Created circle bounding box
-    UIImageView *squareView = [[UIImageView alloc]initWithFrame:CGRectMake(30, 29, 40, 40)];
+    UIImageView *squareView = [[UIImageView alloc]initWithFrame:CGRectMake(SquareViewX, SquareViewY, SquareViewWidth, SquareViewHeight)];
     
     squareView.image = [UIImage imageNamed:@"chatterUsersButton.png"];
-    [squareView setAlpha:.2];
-    squareView.layer.cornerRadius = 20;
+    [squareView setAlpha:SquareViewAlpha];
+    squareView.layer.cornerRadius = SquareViewCornerRadius;
     squareView.layer.masksToBounds = YES;
     [self.view addSubview:squareView];
     
@@ -193,10 +213,19 @@
     
     //Creates actual button
     UIButton *usersBrowserButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    usersBrowserButton.frame = CGRectMake(0, 0, 100, 100);
+    usersBrowserButton.frame = CGRectMake(UserBrowseButtonX, UserBrowseButtonY, UserBrowseButtonWidth, UserBrowseButtonXHeight);
     [usersBrowserButton setBackgroundImage:[UIImage imageWithStackedIcons:@[usersIcon]imageSize:CGSizeMake(100, 100)] forState:UIControlStateNormal];
     [usersBrowserButton addTarget:self action:@selector(browserSetup) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:usersBrowserButton];
+    
+}
+
+-(void)createConnectLabel{
+    UILabel *connectLabel = [[UILabel alloc] initWithFrame:CGRectMake(ConnectLabelX, ConnectLabelY, ConnectLabelWidth, ConnectLabelHeight)];
+    connectLabel.text = @"Connect";
+    [connectLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:ConnectLabelFontSize]];
+    connectLabel.textColor = [UIColor whiteColor];
+    [self.view addSubview:connectLabel];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle
