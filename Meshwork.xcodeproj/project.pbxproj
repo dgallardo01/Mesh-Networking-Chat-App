@@ -151,25 +151,14 @@
 		30AC52D418FC9D0000014DEB /* Chatter */ = {
 			isa = PBXGroup;
 			children = (
-				3005679718FDEB570016B55D /* ChatViewController.h */,
-				3005679818FDEB570016B55D /* ChatViewController.m */,
+				30FA2F081917DE5F005F8502 /* Objects */,
+				30FA2F071917DE45005F8502 /* Controllers */,
+				30FA2F061917DE32005F8502 /* Images */,
 				30AC530118FC9D1500014DEB /* main.storyboard */,
-				3005679A18FE39730016B55D /* UserNameViewController.h */,
-				3005679B18FE39730016B55D /* UserNameViewController.m */,
-				3005679218FDE6F20016B55D /* MultiPeerManager.h */,
-				3005679318FDE6F20016B55D /* MultiPeerManager.m */,
-				3005679D18FF188E0016B55D /* EncounterDataStore.h */,
-				3005679E18FF188E0016B55D /* EncounterDataStore.m */,
 				30AC52DD18FC9D0000014DEB /* AppDelegate.h */,
 				30AC52DE18FC9D0000014DEB /* AppDelegate.m */,
 				30AC52E318FC9D0000014DEB /* Images.xcassets */,
 				30AC52E018FC9D0000014DEB /* Chatter.xcdatamodeld */,
-				300567A218FF378D0016B55D /* settings-25.png */,
-				307D9C7A1906278100421588 /* ChatterBG2.png */,
-				307D9C7E1906AC7600421588 /* chatterBrowseIcon.png */,
-				30D76B911906FF8400F0FEA5 /* chatterUsersButton.png */,
-				3066A77C190D8D65004FEA4A /* Meshwork_Icon.png */,
-				303D68C9190DA277007E538A /* ChatterBG.png */,
 				30AC52D518FC9D0000014DEB /* Supporting Files */,
 			);
 			path = Chatter;
@@ -202,6 +191,41 @@
 				30AC52F418FC9D0000014DEB /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		30FA2F061917DE32005F8502 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				300567A218FF378D0016B55D /* settings-25.png */,
+				307D9C7A1906278100421588 /* ChatterBG2.png */,
+				307D9C7E1906AC7600421588 /* chatterBrowseIcon.png */,
+				30D76B911906FF8400F0FEA5 /* chatterUsersButton.png */,
+				3066A77C190D8D65004FEA4A /* Meshwork_Icon.png */,
+				303D68C9190DA277007E538A /* ChatterBG.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		30FA2F071917DE45005F8502 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3005679A18FE39730016B55D /* UserNameViewController.h */,
+				3005679B18FE39730016B55D /* UserNameViewController.m */,
+				3005679718FDEB570016B55D /* ChatViewController.h */,
+				3005679818FDEB570016B55D /* ChatViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		30FA2F081917DE5F005F8502 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				3005679D18FF188E0016B55D /* EncounterDataStore.h */,
+				3005679E18FF188E0016B55D /* EncounterDataStore.m */,
+				3005679218FDE6F20016B55D /* MultiPeerManager.h */,
+				3005679318FDE6F20016B55D /* MultiPeerManager.m */,
+			);
+			name = Objects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

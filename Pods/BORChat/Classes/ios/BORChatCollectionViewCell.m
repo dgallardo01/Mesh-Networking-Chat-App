@@ -182,7 +182,7 @@ static NSCache *imageCache;
     else{
         _usernameLabel = [UILabel new];
         _usernameLabel.translatesAutoresizingMaskIntoConstraints = NO;
-        _usernameLabel.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:11];
+        _usernameLabel.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:11.0f];
         _usernameLabel.textColor = [UIColor whiteColor];
     }
     return _usernameLabel;
