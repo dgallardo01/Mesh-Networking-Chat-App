@@ -14,6 +14,7 @@
 		3005679F18FF188E0016B55D /* EncounterDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3005679E18FF188E0016B55D /* EncounterDataStore.m */; };
 		300567A318FF378D0016B55D /* settings-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 300567A218FF378D0016B55D /* settings-25.png */; };
 		303D68CA190DA277007E538A /* ChatterBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 303D68C9190DA277007E538A /* ChatterBG.png */; };
+		304713811923C58E00DCC77A /* ChatterBG3.png in Resources */ = {isa = PBXBuildFile; fileRef = 304713801923C58E00DCC77A /* ChatterBG3.png */; };
 		3066A77D190D8D65004FEA4A /* Meshwork_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3066A77C190D8D65004FEA4A /* Meshwork_Icon.png */; };
 		307D9C7B1906278100421588 /* ChatterBG2.png in Resources */ = {isa = PBXBuildFile; fileRef = 307D9C7A1906278100421588 /* ChatterBG2.png */; };
 		307D9C7F1906AC7600421588 /* chatterBrowseIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 307D9C7E1906AC7600421588 /* chatterBrowseIcon.png */; };
@@ -59,6 +60,7 @@
 		3005679E18FF188E0016B55D /* EncounterDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncounterDataStore.m; sourceTree = "<group>"; };
 		300567A218FF378D0016B55D /* settings-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings-25.png"; sourceTree = "<group>"; };
 		303D68C9190DA277007E538A /* ChatterBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ChatterBG.png; sourceTree = "<group>"; };
+		304713801923C58E00DCC77A /* ChatterBG3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ChatterBG3.png; sourceTree = "<group>"; };
 		3066A77C190D8D65004FEA4A /* Meshwork_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Meshwork_Icon.png; sourceTree = "<group>"; };
 		307D9C7A1906278100421588 /* ChatterBG2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ChatterBG2.png; sourceTree = "<group>"; };
 		307D9C7E1906AC7600421588 /* chatterBrowseIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chatterBrowseIcon.png; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 		30FA2F061917DE32005F8502 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				304713801923C58E00DCC77A /* ChatterBG3.png */,
 				300567A218FF378D0016B55D /* settings-25.png */,
 				307D9C7A1906278100421588 /* ChatterBG2.png */,
 				307D9C7E1906AC7600421588 /* chatterBrowseIcon.png */,
@@ -313,6 +316,7 @@
 				303D68CA190DA277007E538A /* ChatterBG.png in Resources */,
 				30AC52E418FC9D0000014DEB /* Images.xcassets in Resources */,
 				307D9C7B1906278100421588 /* ChatterBG2.png in Resources */,
+				304713811923C58E00DCC77A /* ChatterBG3.png in Resources */,
 				3066A77D190D8D65004FEA4A /* Meshwork_Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

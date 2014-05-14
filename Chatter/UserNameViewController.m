@@ -39,7 +39,7 @@
     self.chatVC = [[ChatViewController alloc]init];
     self.dataStore = [EncounterDataStore sharedInstance];
     [self setupTextField];
-    self.usernameBackground.image = [UIImage imageNamed:@"ChatterBG.png"];
+    self.usernameBackground.image = [UIImage imageNamed:@"ChatterBG3.png"];
     
 }
 

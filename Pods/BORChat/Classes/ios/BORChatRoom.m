@@ -124,7 +124,7 @@ static const int BORChatRoomDefaultSpacing = 10;
     _messageContainer.translatesAutoresizingMaskIntoConstraints = NO;
     UIToolbar *blurToolbar = [[UIToolbar alloc] initWithFrame:self.view.bounds];
     blurToolbar.autoresizingMask = self.view.autoresizingMask;
-    [blurToolbar setBackgroundImage:[UIImage imageNamed:@"ChatterBG.png"] forToolbarPosition:UIToolbarPositionAny barMetrics:UIBarMetricsDefault];
+    [blurToolbar setBackgroundImage:[UIImage imageNamed:@"ChatterBG3.png"] forToolbarPosition:UIToolbarPositionAny barMetrics:UIBarMetricsDefault];
     [blurToolbar setBackgroundImage:[[UIImage alloc]init] forToolbarPosition:UIToolbarPositionAny barMetrics:UIBarMetricsDefault];
     //    blurToolbar.translucent = YES;
     [_messageContainer addSubview:blurToolbar];
