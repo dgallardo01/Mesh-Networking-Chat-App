@@ -496,6 +496,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Chatter/Meshwork-Prefix.pch";
 				INFOPLIST_FILE = "Chatter/Meshwork-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = Meshwork;
 				WRAPPER_EXTENSION = app;
 			};
@@ -510,6 +511,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Chatter/Meshwork-Prefix.pch";
 				INFOPLIST_FILE = "Chatter/Meshwork-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = Meshwork;
 				WRAPPER_EXTENSION = app;
 			};
